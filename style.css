@@ -121,3 +121,51 @@ button {
     text-align: center;
     font-weight: 600;
 }
+
+/*ANIMACIONES*/
+#animated-text {
+    display: inline-block;
+    font-weight: bold;
+  }
+  .fade-word {
+    display: inline-block;
+    opacity: 0;
+  }
+  
+  /*  brillo */
+  .fade-in {
+    animation: fadeMagicIn 0.6s forwards;
+  }
+  
+  @keyframes fadeMagicIn {
+    0% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.95);
+      filter: blur(2px) brightness(1.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0) brightness(1);
+    }
+  }
+  
+  /* Salida mágica con brillo decreciente */
+  .fade-out {
+    animation: fadeMagicOut 0.7s ease-in-out forwards;
+  }
+  
+  @keyframes fadeMagicOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0) brightness(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-4px) scale(0.98);
+      filter: blur(2px) brightness(1.3);
+    }
+  }
+  
+  
