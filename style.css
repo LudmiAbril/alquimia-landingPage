@@ -501,6 +501,11 @@ button {
   text-transform: uppercase;
   font-size: 20px;
 }
+.question-block{    display: flex
+    ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;}
 /*ANIMACIONES*/
 #animated-text {
   display: inline-block;
