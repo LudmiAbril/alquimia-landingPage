@@ -55,19 +55,19 @@ const frases = [
   // Familia -> color y texto
   const familias = {
     acuatica: {
-      texto: "Tu familia olfativa es: Acuáticos/Verdes.",
+      texto: "Marinas/Cítricas.",
       color: "#66cccc"
     },
     frutal: {
-      texto: "Tu familia olfativa es: Frutales/Florales exóticas.",
+      texto: "Frutales/Florales.",
       color: "#ff6699"
     },
     madera: {
-      texto: "Tu familia olfativa es: Maderas/Especias.",
+      texto: " Amaderadas/Especiadas.",
       color: "#cc9966"
     },
     ambarada: {
-      texto: "Tu familia olfativa es: Gourmand/Ambarados.",
+      texto: "Gourmand/Ambaradas.",
       color: "#9966cc"
     }
   };
@@ -111,18 +111,30 @@ const frases = [
     btn.addEventListener("click", async () => {
       const tipo = btn.dataset.fragancia;
       const familia = familias[tipo];
-  
       if (familia) {
         resultadoTexto.textContent = familia.texto;
         resultadoFamilia.classList.remove("hidden");
         pregunta2.classList.add("hidden");
-  
+      
+        // Aplicar animación mágica letra por letra
+        const texto = familia.texto;
+        resultadoTexto.textContent = ""; // Limpiar
+        texto.split("").forEach((char, i) => {
+          const span = document.createElement("span");
+          span.textContent = char;
+          span.style.animation = "magic-fade 0.6s ease forwards";
+          span.style.animationDelay = `${i * 0.05}s`;
+          resultadoTexto.appendChild(span);
+        });
+      
         // Llenar poción con animación
         await animarLlenado(familia.color);
       }
+      
     });
   });
-  
+
+
   // Reiniciar prueba
   reiniciarBtn.addEventListener("click", () => {
     resultadoFamilia.classList.add("hidden");
