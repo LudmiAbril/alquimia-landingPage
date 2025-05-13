@@ -78,10 +78,46 @@
             <p class="center phrase">No necesitás ser experto ni invertir en ingredientes, solo dejarte llevar por tu intuición.</p>
         </section>
   
-        <!-- Sección LILA: funcionalidades + test -->
-        <section class="functionalitys section-lilac overlapped">
-            <!-- tarjetas de funcionalidades, test olfativo, etc. -->
-        </section>
+        <section class="test-olfativo section-lilac" id="testOlfativo">
+            <div class="grid-olfativo">
+              <!-- Columna izquierda: texto y CTA -->
+              <div class="olfativo-info">
+                <h2>Diseñá tu fragancia desde cero, como un verdadero alquimista.</h2>
+                <p>Elegí tus ingredientes favoritos, combiná notas aromáticas y personalizá el frasco a tu gusto. Nuestra plataforma te acompaña paso a paso para que experimentes, explores y crees una fragancia tan única como vos.</p>
+                <button class="btn-main">Empezar a Diseñar</button>
+              </div>
+          
+              <!-- Columna derecha: poción + pregunta -->
+              <div class="olfativo-interactivo">
+                <!-- Frasco de pócima (solo uno visible al inicio) -->
+                <div class="pocima-container">
+                  <object id="svgPocima" type="image/svg+xml" data="./img/potion/potion00.svg" width="250" height="250"></object>
+                </div>
+          
+                <!-- Pregunta 2 -->
+                <div class="question-block" id="pregunta2">
+                  <h3>¿Qué clima preferís?</h3>
+                  <p>Responde para que descubramos qué familia olfativa va con vos</p>
+                  <div class="opciones">
+                    <button data-etapa="2" data-fragancia="acuatica">🌊 Fresco/brisa marina</button>
+                    <button data-etapa="2" data-fragancia="frutal">🌴 Calor tropical</button>
+                    <button data-etapa="2" data-fragancia="madera">🍂 Otoño con hojas secas</button>
+                    <button data-etapa="2" data-fragancia="ambarada">❄️ Invierno nevado</button>
+                  </div>
+                </div>
+          
+                <!-- Resultado de familia olfativa (DESPUÉS DE ELEGIR EN TEST) -->
+                <div class="resultado-olfativo hidden" id="resultadoFamilia">
+                    <p class="texto-resultado"></p>
+                    <button id="btnReiniciar" class="btn-reiniciar">🔁 Volver a probar</button>
+                </div>
+                
+  
+                </div>
+              </div>
+            </div>
+          </section>
+          
                 
         <!-- Sección HUESO: proveedores -->
         <section class="providers-contact section-bone">

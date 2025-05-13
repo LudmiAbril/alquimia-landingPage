@@ -215,7 +215,7 @@ button {
     & .btn-main{
         background-color: #9444B6;
         color: white;
-        border-radius: .5rem;
+        border-radius: 10px;
         outline: none;
         padding: 1rem 3rem;
         margin: 3rem 0;
@@ -247,6 +247,7 @@ button {
     z-index: 2;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
+    color: white;
   }
   
   .overlapped {
@@ -258,6 +259,84 @@ button {
     z-index: 2;
   }
 
+  /*SECTION LILA*/
+  .grid-olfativo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .olfativo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .olfativo-interactivo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .pocima-container object {
+    max-width: 100%;
+  }
+  
+  .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .opciones button {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .opciones button:hover {
+    background: #f0f0f0;
+  }
+  
+  .resultado-olfativo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .btn-reiniciar {
+    margin-top: 1rem;
+    background: #fff;
+    color: #444;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-reiniciar:hover {
+    background: #eee;
+  }
+  
+  .pocima-container svg .relleno {
+    transition: fill 0.5s ease;
+  }
+  .relleno {
+    fill: #00bfa6; /* color según la familia olfativa */
+  }
+    
 /*ANIMACIONES*/
 #animated-text {
     display: inline-block;
