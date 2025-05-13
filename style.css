@@ -196,6 +196,41 @@ button {
         font-size: 24px;
     }
 }
+/**/
+/*Proveedores*/
+.providers-text{
+    
+    max-width: 60%;
+    margin: 3rem auto;
+    & p{
+        text-align: left;
+        margin: 2rem 0;
+    }
+}
+.providers-contact{
+
+    & h2{
+        margin-top: 10rem;
+    }
+    & .btn-main{
+        background-color: #9444B6;
+        color: white;
+        border-radius: .5rem;
+        outline: none;
+        padding: 1rem 3rem;
+        margin: 3rem 0;
+        font-family: 'Roboto';
+    }
+    
+}
+.provider-btn{
+    display: flex;
+    justify-content: center;
+}
+/*Footer*/
+.footer{
+    background-color: #9444B6;
+}
 /*SECCIONES COLORES*/
 .section-bone {
     background-color: #E8E3DE;
