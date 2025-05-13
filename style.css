@@ -126,7 +126,24 @@ button {
     display: flex;
     background-color: #C5A2D4;
     color: white;
-    
+    max-height: 74vh;/*56*/
+    overflow: hidden;
+    & .roses{
+        margin-top: -39vh;
+        margin-left: -5vh;
+        background-image: url('../img/Maskgroup.svg');
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60%;
+        height: 105vh;/*80*/
+        }
+        & article{
+            width: 50%;
+        }
+    & .reason{
+        max-width: 33%;
+    }
     & h2{
         font-family: 'Volkhov';
     }
