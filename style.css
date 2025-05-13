@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --violet: #9444B6;
+    --lilac: #C5A2D4;
+    --bone: #E8E3DE;
+    --gray: #40403E;
+    --title-font: "Volkhov", serif;
+    --text-font: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    color: white;
+    font-family: var(--text-font);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0  42px;
+    padding-top: 10px;
+}
+
+.header-links-profile {
+    display: flex;
+    gap: 29px;
+    align-items: center;
+}
+
+.header-links {
+    display: flex;
+    gap: 29px;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-icon {
+    width: 35px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("./img/Group\ 72.png");
+    background-size: cover;
+    background-position: center;    /* centra la imagen */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {
+    font-family: var(--title-font);
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    color: white;
+    width: 657px;
+    margin-bottom: 39px;
+}
+
+.hero-text {
+    color: white;
+    width: 479px;
+    margin-bottom: 85px;
+    font-weight: 400;
+}
+
+.hero-texts-box {
+    margin-left: 144px;
+}
+
+
+.text {
+    font-family: var(--text-font);
+    font-size: 24px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.cto-btn {
+    background-color: var(--violet);
+    color: white;
+    font-family: var(--text-font);
+    width: 283px;
+    height: 58px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
