@@ -191,6 +191,35 @@ button {
   }
 }
 
+.reason h2 {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+  }
+  
+  .reason h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #fff, #ffc1fa);
+    border-radius: 2px;
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Se activa al hacer scroll */
+  .reason h2.animate-underline::after {
+    width: 50%;
+  }
+  
+  @keyframes underline-slide {
+    from { width: 0; }
+    to { width: 50%; }
+  }
+  
+  
 .center {
   text-align: center;
 }
