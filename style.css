@@ -3,6 +3,7 @@
 
 :root {
   --violet: #9444b6;
+  --hoverViolet: #81479c;
   --lilac: #c5a2d4;
   --bone: #e8e3de;
   --gray: #40403e;
@@ -70,7 +71,8 @@ header {
   height: 100vh;
   background-image: url("./img/Group\ 72.png");
   background-size: cover;
-  background-position: center; /* centra la imagen */
+  background-position: center;
+  /* centra la imagen */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -110,11 +112,13 @@ header {
   font-size: 20px;
   font-style: italic;
 }
+
 .text-medium {
   font-family: var(--text-font);
   font-size: 21px;
   text-align: start;
 }
+
 .texto-resultado {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -137,7 +141,8 @@ button {
   all: unset;
   cursor: pointer;
 }
-.btn-main {
+
+.cto-btn {
   background-color: var(--violet);
   color: white;
   border-radius: 10px;
@@ -145,27 +150,27 @@ button {
   text-align: center;
   padding: 1rem 3rem;
   margin: 3rem 0;
-  font-family: "Roboto";
+  font-family: var(--text-font);
   text-transform: uppercase;
   width: 200px;
+   font-weight: 600;
 }
-.cto-btn {
-  background-color: var(--violet);
-  color: white;
-  font-family: var(--text-font);
-  width: 283px;
-  height: 58px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: 600;
+
+.cto-btn:hover {
+  background-color: var(--hoverViolet);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
 }
+
 /*Intro*/
 .intro {
   display: flex;
   background-color: #c5a2d4;
   color: white;
-  max-height: 74vh; /*56*/
+  max-height: 74vh;
+  /*56*/
   overflow: hidden;
+
   & .roses {
     margin-top: -39vh;
     margin-left: -5vh;
@@ -174,18 +179,23 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     width: 60%;
-    height: 105vh; /*80*/
+    height: 105vh;
+    /*80*/
   }
+
   & article {
     width: 50%;
   }
+
   & .reason {
     max-width: 33%;
     margin-top: 5%;
   }
+
   & h2 {
     font-family: "Volkhov";
   }
+
   & p {
     font-family: "Roboto";
   }
@@ -223,58 +233,70 @@ button {
 .center {
   text-align: center;
 }
+
 .row {
   display: flex;
   flex-direction: row;
 }
+
 .column {
   display: flex;
   flex-direction: column;
 }
+
 /*STEPS*/
 .steps {
   & .title {
     margin: 7rem 0;
   }
+
   & .row {
     justify-content: space-evenly;
     align-items: center;
+
     & .column {
       padding: 1rem;
       justify-content: center;
       align-items: center;
       max-width: 210px;
+
       & img {
         width: 150px;
         height: 150px;
       }
     }
   }
+
   & p {
     font-family: "Roboto";
     font-weight: bold;
     font-size: 24px;
     text-align: center;
   }
+
   & .phrase {
     margin: 5rem 0;
     font-size: 24px;
   }
 }
+
 /**/
 /*Proveedores*/
 .providers-text {
   max-width: 60%;
   margin: 3rem auto;
+
   & p {
     text-align: left;
     margin: 2rem 0;
   }
 }
+
 .providers-contact {
   & h2 {
     margin-top: 10rem;
   }
+
   & .btn-main {
     background-color: #9444b6;
     color: white;
@@ -285,10 +307,12 @@ button {
     font-family: "Roboto";
   }
 }
+
 .provider-btn {
   display: flex;
   justify-content: center;
 }
+
 /*Footer*/
 .footer {
   background-color: #e8e3de;
@@ -299,18 +323,22 @@ button {
     border-radius: 5rem 5rem 0 0;
     padding: 2rem 4rem 1rem;
   }
+
   .row {
     justify-content: space-between;
+
     & p {
       & a {
         color: white;
         text-decoration: none;
       }
     }
+
     img {
       cursor: pointer;
     }
   }
+
   .footer-contain {
     & .hr {
       border: 1px solid #e8e3de;
@@ -318,6 +346,7 @@ button {
     }
   }
 }
+
 /*SECCIONES COLORES*/
 .section-bone {
   background-color: var(--bone);
@@ -325,6 +354,11 @@ button {
   position: relative;
   z-index: 1;
   margin-top: -100px;
+  color: var(--gray);
+}
+
+.steps-row {
+  font-style: italic;
 }
 
 .section-lilac {
@@ -402,9 +436,12 @@ button {
 
 .opciones {
   display: grid;
-  grid-template-columns: repeat(2, auto); /* dos columnas */
-  justify-content: center; /* centra las columnas horizontalmente */
-  gap: 1rem 2rem; /* fila/columna */
+  grid-template-columns: repeat(2, auto);
+  /* dos columnas */
+  justify-content: center;
+  /* centra las columnas horizontalmente */
+  gap: 1rem 2rem;
+  /* fila/columna */
 }
 
 .btn-fragancia {
@@ -434,13 +471,15 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* oscuro y semitransparente */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* oscuro y semitransparente */
   z-index: 1;
 }
 
 .btn-fragancia:hover {
   color: white;
 }
+
 .btn-fragancia .contenido-btn {
   position: relative;
   z-index: 2;
@@ -612,6 +651,7 @@ button {
   display: inline-block;
   font-weight: bold;
 }
+
 .fade-word {
   display: inline-block;
   opacity: 0;
@@ -628,6 +668,7 @@ button {
     transform: translateY(8px) scale(0.95);
     filter: blur(2px) brightness(1.8);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -646,6 +687,7 @@ button {
     transform: translateY(0) scale(1);
     filter: blur(0) brightness(1);
   }
+
   100% {
     opacity: 0;
     transform: translateY(-4px) scale(0.98);
@@ -659,6 +701,7 @@ button {
     transform: scale(1.2) rotate(2deg);
     filter: brightness(1.5) drop-shadow(0 0 4px #fff6);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) rotate(0);
@@ -700,11 +743,13 @@ button {
 
   .intro {
     flex-direction: column;
+
     & .roses {
       width: 100%;
       height: 300px;
       margin: 0;
     }
+
     & .reason {
       max-width: 90%;
       width: 100%;
@@ -758,6 +803,7 @@ button {
     gap: 1rem;
   }
 }
+
 @media (max-width: 768px) {
     .footer .row {
       flex-direction: column;
