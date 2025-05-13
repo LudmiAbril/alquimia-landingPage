@@ -229,7 +229,36 @@ button {
 }
 /*Footer*/
 .footer{
-    background-color: #9444B6;
+    background-color: #E8E3DE;
+    color: white;
+    
+    
+    & .footer-contain{
+        background-color: #9444B6;
+        border-radius: 5rem 5rem 0 0;
+        padding: 2rem 4rem 1rem;
+    }
+    .row{
+        justify-content: space-between;
+        & p{
+
+            & a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+    .footer-contain{
+
+        & .hr{
+            
+            border: 1px solid #E8E3DE;
+            height: 2px; 
+        }
+    }
 }
 /*SECCIONES COLORES*/
 .section-bone {
