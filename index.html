@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Alquimia - landing page</title>
-    <link rel="shortcut icon" href="./img/Group.svg" type="image/x-icon">
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-=======
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alquimia - landing page</title>
@@ -18,50 +8,47 @@
   <link rel="stylesheet" href="style.css" />
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
->>>>>>> 948579217109ad82d11cc24f0fe8da034d66afce
 </head>
 
 <body>
-  <main>
-    <!-- Header -->
-    <header>
-      <img src="/img/alquimia-logo.svg" alt="logo de Alquimia" class="logo" />
-      <div class="header-links-profile">
-        <div class="header-links">
-          <a href="">Home</a>
-          <a href="">Diseñar</a>
-          <a href="">Descubrir</a>
-          <a href="">Proveedores</a>
-        </div>
-        <img src="/img/profile-icon.svg" alt="perfil" class="profile-icon" />
-      </div>
-    </header>
+    <main>
+        <header>
+            <img src="/img/alquimia-logo.svg" alt="logo de Alquimia" class="logo">
+            <div class="header-links-profile">
+                <div class="header-links">
+                    <a href="">Home</a>
+                    <a href="">Diseñar</a>
+                    <a href="">Descubrir</a>
+                    <a href="">Proveedores</a>
+                </div>
+                <img src="/img/profile-icon.svg" alt="perfil" class="profile-icon">
+            </div>
+        </header>
+        <section class="hero">
 
-<<<<<<< HEAD
             <div class="hero-texts-box">
                 <h1 class="title hero-title">
                     <span id="animated-text">Diseñá perfumes que hablen de vos.</span>
-                </h1>
-
+                  </h1>
+                  
                 <p class="text hero-text">Creatividad, emoción y aroma. Todo desde una plataforma hecha para no
                     expertos.</p>
                 <button class="cto-btn">EMPEZAR A CREAR</button>
             </div>
         </section>
-        <!-- Sección LILA: ¿Por qué Alquimia? -->
-        <section class="intro section-lilac row">
-            <article class="roses">
-                <!-- <img src="./img/Mask group.svg" alt=""> -->
-            </article>
-            <article class="reason">
-                <h2 class="title" data-aos="fade-up">¿POR QUÉ ALQUIMIA?</h2>
-                <p class="text" data-aos="fade-up">Alquimia nace para que el arte de crear perfumes esté al alcance de
-                    todos. <br>
+       <!-- Sección LILA: ¿Por qué Alquimia? -->
+            <section class="intro section-lilac row" >
+                <article class="roses">
+                    <!-- <img src="./img/Mask group.svg" alt=""> -->
+                </article>
+                <article class="reason">
+                    <h2 class="title" data-aos="fade-up">¿POR QUÉ ALQUIMIA?</h2>
+                    <p class="text" data-aos="fade-up">Alquimia nace para que el arte de crear perfumes esté al alcance de todos. <br>
                     Diseñamos una experiencia que te permite transformar tus ideas en aromas.</p>
-            </article>
-        </section>
-
-        <!-- Sección HUESO: Cómo funciona -->
+                </article>
+            </section>
+  
+     <!-- Sección HUESO: Cómo funciona -->
         <section class="steps section-bone">
             <h2 class="center title">¿CÓMO FUNCIONA?</h2>
             <article class="row">
@@ -69,7 +56,7 @@
                     <img src="./img/step1.svg" alt="">
                     <p>Seleccioná las esencias</p>
                 </div>
-                <div class="column">
+                <div  class="column">
                     <img src="./img/Step2.svg" alt="">
                     <p>Combiná las notas</p>
                 </div>
@@ -86,303 +73,95 @@
                     <p>Recibí tus ingredientes</p>
                 </div>
             </article>
-            <p class="center phrase">No necesitás ser experto ni invertir en ingredientes, solo dejarte llevar por tu
-                intuición.</p>
+            <p class="center phrase">No necesitás ser experto ni invertir en ingredientes, solo dejarte llevar por tu intuición.</p>
         </section>
-
+  
         <section class="test-olfativo section-lilac" id="testOlfativo">
             <div class="grid-olfativo">
-                <!-- Columna izquierda: texto y CTA -->
-                <div class="olfativo-info">
-                    <h2>Diseñá tu fragancia desde cero, como un verdadero alquimista.</h2>
-                    <p>Elegí tus ingredientes favoritos, combiná notas aromáticas y personalizá el frasco a tu gusto.
-                        Nuestra plataforma te acompaña paso a paso para que experimentes, explores y crees una fragancia
-                        tan única como vos.</p>
-                    <button class="btn-main">Empezar a Diseñar</button>
+              <!-- Columna izquierda: texto y CTA -->
+              <div class="olfativo-info">
+                <h2>Diseñá tu fragancia desde cero, como un verdadero alquimista.</h2>
+                <p>Elegí tus ingredientes favoritos, combiná notas aromáticas y personalizá el frasco a tu gusto. Nuestra plataforma te acompaña paso a paso para que experimentes, explores y crees una fragancia tan única como vos.</p>
+                <button class="btn-main">Empezar a Diseñar</button>
+              </div>
+          
+              <!-- Columna derecha: poción + pregunta -->
+              <div class="olfativo-interactivo">
+                <!-- Frasco de pócima (solo uno visible al inicio) -->
+                <div class="pocima-container">
+                  <object id="svgPocima" type="image/svg+xml" data="./img/potion/potion00.svg" width="250" height="250"></object>
                 </div>
-
-                <!-- Columna derecha: poción + pregunta -->
-                <div class="olfativo-interactivo">
-                    <!-- Frasco de pócima (solo uno visible al inicio) -->
-                    <div class="pocima-container">
-                        <object id="svgPocima" type="image/svg+xml" data="./img/potion/potion00.svg" width="250"
-                            height="250"></object>
-                    </div>
-
-                    <!-- Pregunta 2 -->
-                    <div class="question-block" id="pregunta2">
-                        <h3>¿Qué clima preferís?</h3>
-                        <p>Responde para que descubramos qué familia olfativa va con vos</p>
-                        <div class="opciones">
-                            <button data-etapa="2" data-fragancia="acuatica">🌊 Fresco/brisa marina</button>
-                            <button data-etapa="2" data-fragancia="frutal">🌴 Calor tropical</button>
-                            <button data-etapa="2" data-fragancia="madera">🍂 Otoño con hojas secas</button>
-                            <button data-etapa="2" data-fragancia="ambarada">❄️ Invierno nevado</button>
-                        </div>
-                    </div>
-
-                    <!-- Resultado de familia olfativa (DESPUÉS DE ELEGIR EN TEST) -->
-                    <div class="resultado-olfativo hidden" id="resultadoFamilia">
-                        <p class="texto-resultado"></p>
-                        <button id="btnReiniciar" class="btn-reiniciar">🔁 Volver a probar</button>
-                    </div>
-
-
+          
+                <!-- Pregunta 2 -->
+                <div class="question-block" id="pregunta2">
+                  <h3>¿Qué clima preferís?</h3>
+                  <p>Responde para que descubramos qué familia olfativa va con vos</p>
+                  <div class="opciones">
+                    <button data-etapa="2" data-fragancia="acuatica">🌊 Fresco/brisa marina</button>
+                    <button data-etapa="2" data-fragancia="frutal">🌴 Calor tropical</button>
+                    <button data-etapa="2" data-fragancia="madera">🍂 Otoño con hojas secas</button>
+                    <button data-etapa="2" data-fragancia="ambarada">❄️ Invierno nevado</button>
+                  </div>
                 </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- Sección INSUMOS:  -->
-        <section class="insumos">
-            <div class="insumos-container">
-                <div class="insumos-texto">
-                    <h2 class="title">TODOS LOS INSUMOS A TU ALCANCE</h2>
-                    <p>
-                        Te conectamos con distintos proveedores registrados en nuestra plataforma,
-                        de forma que tendrás acceso a un extenso catálogo de materia prima, como envases, esencias y
-                        alcoholes.
-                    </p>
-                    <p> Contamos con una gran variedad de opciones y precios adecuados para vos.
-                    </p>
-                    <button class="btn">QUIERO REGISTRARME</button>
-
+          
+                <!-- Resultado de familia olfativa (DESPUÉS DE ELEGIR EN TEST) -->
+                <div class="resultado-olfativo hidden" id="resultadoFamilia">
+                    <p class="texto-resultado"></p>
+                    <button id="btnReiniciar" class="btn-reiniciar">🔁 Volver a probar</button>
                 </div>
-                <div class="insumos-imagen"></div>
+                
+  
+                </div>
+              </div>
             </div>
-        </section>
-        <section id="faq" class="acordion">
-            <h2>PREGUNTAS FRECUENTES</h2>
-
-            <div class="accordion-item">
-                <button class="accordion-header">CREA TU PROPIO PERFUME CON ALQUIMIA<span
-                        class="arrow">▼</span></button>
-                <div class="accordion-content">Personalizá tu fragancia única combinando ingredientes que reflejan tu
-                    esencia.</div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">¿CÓMO CREAR TU PROPIO PERFUME ONLINE?<span
-                        class="arrow">▼</span></button>
-                <div class="accordion-content">Usá nuestro editor interactivo para elegir tus notas favoritas y ver tu
-                    fórmula.</div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">¿POR QUÉ DISEÑAR TU PROPIO PERFUME?<span
-                        class="arrow">▼</span></button>
-                <div class="accordion-content">Porque nadie más huele como vos: expresá tu identidad a través de un
-                    aroma único.</div>
-            </div>
-
-            <!-- Podés agregar más ítems igual que los anteriores -->
-        </section>
-
+          </section>
+          
+                
         <!-- Sección HUESO: proveedores -->
         <section class="providers-contact section-bone">
             <!-- contacto, invitación a proveedores -->
             <h2 class="title center">¿sos fabricante o proveedor de insumos para perfumería?</h2>
             <article class="providers-text">
-                <p class="center text">Te ofrecemos la posibilidad de publicitar tus productos en nuestra plataforma,
-                    con un costo anual de $50000 podés controlar tu stock y fijar tus precios.</p>
-
+                <p class="center text">Te ofrecemos la posibilidad de publicitar tus productos en nuestra plataforma, con un costo anual de $50000 podés controlar tu stock y fijar tus precios.</p>
             </article>
             <article class="provider-btn">
                 <button class="btn-main mg-auto">QUIERO SER PARTE</button>
             </article>
         </section>
-
+  
         <footer class="footer">
             <div class="footer-contain">
                 <div class="column">
-                    <div class="row">
-                        <img src="./img/isologotipo.svg" alt="">
-                        <div class="column">
-                            <p>Encontranos en:</p>
-                            <div class="row">
-                                <img src="./img/tiktok.svg" alt="">
-                                <img src="./img/ig.svg" alt="">
-                            </div>
+                <div class="row">
+                    <img src="./img/isologotipo.svg" alt="">
+                    <div class="column">
+                        <p>Encontranos en:</p>
+                        <div class="row">
+                            <img src="./img/tiktok.svg" alt="">
+                            <img src="./img/ig.svg" alt="">
                         </div>
+                    </div>
 
-                    </div>
-                    <div class="hr"></div>
-                    <div class="row">
-                        <p>© 2025 Alquimia. Todos los derechos reservados. Este sitio es solo informativo. No nos
-                            responsabilizamos por el uso indebido de los ingredientes.</p>
-                        <p><a href="#">Términos y condiciones</a></p>
-                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="row">
+                    <p>© 2025 Alquimia. Todos los derechos reservados. Este sitio es solo informativo. No nos responsabilizamos por el uso indebido de los ingredientes.</p>
+                    <p><a href="#">Términos y condiciones</a></p>
                 </div>
             </div>
-
+            </div>
+            
         </footer>
     </main>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000, // tiempo de animación
-            once: true // se ejecuta solo 1 vez
-        });
-    </script>
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-    </script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // tiempo de animación
+    once: true // se ejecuta solo 1 vez
+  });
+</script>
+
 </body>
 <script src="./index.js"></script>
-
 </html>
-=======
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-texts-box" data-aos="fade-right">
-        <h1 class="title hero-title">
-          <span id="animated-text">Diseñá perfumes que hablen de vos.</span>
-        </h1>
-        <p class="text hero-text">Creatividad, emoción y aroma. Todo desde una plataforma hecha para no expertos.</p>
-        <button class="cto-btn">EMPEZAR A CREAR</button>
-      </div>
-    </section>
-
-    <!-- ¿Por qué Alquimia? -->
-    <section class="intro section-lilac row">
-      <article class="roses" data-aos="fade-right"></article>
-      <article class="reason" data-aos="fade-left">
-        <h2 class="title">¿POR QUÉ ALQUIMIA?</h2>
-        <p class="text">
-          Alquimia nace para que el arte de crear perfumes esté al alcance de todos. <br />
-          Diseñamos una experiencia que te permite transformar tus ideas en aromas.
-        </p>
-      </article>
-    </section>
-
-    <!-- ¿Cómo funciona? -->
-    <section class="steps section-bone">
-      <h2 class="center title" data-aos="fade-up">¿CÓMO FUNCIONA?</h2>
-      <article class="row">
-        <div class="column" data-aos="fade-up" data-aos-delay="100">
-          <img src="./img/step1.svg" alt="" />
-          <p>Seleccioná las esencias</p>
-        </div>
-        <div class="column" data-aos="fade-up" data-aos-delay="200">
-          <img src="./img/Step2.svg" alt="" />
-          <p>Combiná las notas</p>
-        </div>
-        <div class="column" data-aos="fade-up" data-aos-delay="300">
-          <img src="./img/step3.svg" alt="" />
-          <p>Diseñá tu packaging</p>
-        </div>
-        <div class="column" data-aos="fade-up" data-aos-delay="400">
-          <img src="./img/step4.svg" alt="" />
-          <p>Contactate con tus proveedores</p>
-        </div>
-        <div class="column" data-aos="fade-up" data-aos-delay="500">
-          <img src="./img/Step5.svg" alt="" />
-          <p>Recibí tus ingredientes</p>
-        </div>
-      </article>
-      <p class="center phrase" data-aos="fade-in">No necesitás ser experto ni invertir en ingredientes, solo dejarte llevar por tu intuición.</p>
-    </section>
-
-    <section class="test-olfativo section-lilac" id="testOlfativo">
-      <div class="grid-olfativo">
-        <!-- Izquierda -->
-        <div class="olfativo-info" data-aos="fade-right">
-          <h2 class="title">¿No sabés por dónde empezar?<br>Dejá que la magia te guíe.</h2>
-          <p class="text">Nuestro test de aromas te orienta a través de distintas preguntas que te permitirán encontrar los aromas que se adapten a tu esencia, creando tu fórmula perfecta.</p>
-          <button class="btn-main">QUIERO HACER EL TEST</button>
-        
-        </div>
-    
-        <!-- Derecha -->
-        <div class="olfativo-interactivo" data-aos="fade-left">
-          <div class="pocima-container"></div>
-    
-          <div class="question-block" id="preguntaBlock"">
-            <h3 class="question">¿Qué clima preferís?</h3>
-            <p class="text-small">Responde para que descubramos qué familia olfativa va con vos</p>
-            <div class="opciones">
-              <button class="btn-fragancia acuatica" data-fragancia="acuatica"><span class="contenido-btn">Brisa marina</span></button>
-              <button class="btn-fragancia frutal" data-fragancia="frutal"><span class="contenido-btn">Calor Tropical</span></button>
-              <button class="btn-fragancia madera" data-fragancia="madera"><span class="contenido-btn">Otoño Templado</span></button>
-              <button class="btn-fragancia ambarada" data-fragancia="ambarada"><span class="contenido-btn">Invierno Nevado</span></button>
-            </div>
-          </div>
-    
-          <div class="resultado-olfativo hidden" id="resultadoFamilia">
-            <p class="text-medium">Según tu respuesta, es probable que te gusten las esencias :</p>
-            <p class="texto-resultado"></p>
-            <button id="btnReiniciar" class="btn-probar">Volver a probar</button>
-          </div>
-        </div>
-      </div>
-    
-      <!-- Crear Perfume -->
-      <div class="grid-perfume">
-        <div class="crear-perfume-img" data-aos="fade-right">
-          <img src="./img/ilustracionPerfumBoy.png" alt="hombre haciendo perfume guiado por Alquimia">
-        </div>
-    
-        <div class="crear-perfume-info" data-aos="fade-left">
-          <h2 class="title">Diseñá tu fragancia desde cero, como un verdadero alquimista.</h2>
-          <p class="text">Elegí tus ingredientes favoritos, combiná notas aromáticas y personalizá el frasco a tu gusto.</p>
-          <p class="text">Nuestra plataforma te acompaña paso a paso para que experimentes, explores y crees una fragancia tan única como vos.</p>
-          <button class="btn-main">Empezar a Diseñar</button>
-        </div>
-      </div>
-    </section>
-    
-
-    <!-- Proveedores -->
-    <section class="providers-contact section-bone" data-aos="fade-up">
-      <h2 class="title center">¿Sos fabricante o proveedor de insumos para perfumería?</h2>
-      <article class="providers-text">
-        <p class="center text">Te ofrecemos la posibilidad de publicitar tus productos en nuestra plataforma. Con un costo anual de $50.000 podés controlar tu stock y fijar tus precios.</p>
-      </article>
-      <article class="provider-btn">
-        <button class="btn-main mg-auto">QUIERO SER PARTE</button>
-      </article>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-contain">
-        <div class="column">
-          <div class="row">
-            <img src="./img/isologotipo.svg" alt="" />
-            <div class="column">
-              <p>Encontranos en:</p>
-              <div class="row">
-                <img src="./img/tiktok.svg" alt="TikTok" />
-                <img src="./img/ig.svg" alt="Instagram" />
-              </div>
-            </div>
-          </div>
-          <div class="hr"></div>
-          <div class="row">
-            <p>© 2025 Alquimia. Todos los derechos reservados. Este sitio es solo informativo. No nos responsabilizamos por el uso indebido de los ingredientes.</p>
-            <p><a href="#">Términos y condiciones</a></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-   AOS.init({
-  duration: 1000,
-  once: false 
-});
-
-  </script>
-  <script src="./index.js"></script>
-</body>
-</html>
->>>>>>> 948579217109ad82d11cc24f0fe8da034d66afce
