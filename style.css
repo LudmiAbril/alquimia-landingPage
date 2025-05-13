@@ -126,14 +126,57 @@ button {
     display: flex;
     background-color: #C5A2D4;
     color: white;
-    & .roses{
-        background-image: url("./img/Maskgroup.svg");
-    }
+    
     & h2{
         font-family: 'Volkhov';
     }
     & p{
         font-family: 'Roboto';
+    }
+}
+.title{
+    font-family: 'Volkhov';
+}
+.center{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+/*STEPS*/
+.steps{
+    & .title{
+        margin: 7rem 0;
+    }
+    & .row{
+        justify-content: space-evenly;
+        align-items: center;
+        & .column{
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            max-width: 210px;
+            & img{
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    & p{
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        
+    }
+    & .phrase{
+        margin: 5rem 0;
+        font-size: 24px;
     }
 }
 /*SECCIONES COLORES*/
