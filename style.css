@@ -211,7 +211,7 @@ button {
   
   /* Se activa al hacer scroll */
   .reason h2.animate-underline::after {
-    width: 50%;
+    width: 75%;
   }
   
   @keyframes underline-slide {
@@ -346,38 +346,47 @@ button {
   z-index: 2;
 }
 
-/*SECTION LILA*/
-.grid-olfativo {
+.grid-olfativo,
+.grid-perfume {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.olfativo-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.olfativo-interactivo {
-  display: flex;
-  flex-direction: column;
+  gap: 4rem;
   align-items: center;
-  gap: 2rem;
+  padding: 3rem 5vw;
 }
+.pocima-container{display: flex
+    ;
+        align-items: center;
+        justify-content: center;}
+
 .olfativo-info,
-.olfativo-interactivo {
+.olfativo-interactivo,
+.crear-perfume-info,
+.crear-perfume-img {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.test-olfativo .btn-main {
+  align-self: flex-start;
+}
+
+.crear-perfume-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  margin-left: 80px;
 }
 
-.pocima-container object {
-  max-width: 100%;
+.crear-perfume-img img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
 }
+
+
 
 .opciones {
   display: grid;
@@ -665,6 +674,26 @@ button {
   
     .footer p {
       font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    .grid-olfativo,
+    .grid-perfume {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .olfativo-info,
+    .olfativo-interactivo,
+    .crear-perfume-info,
+    .crear-perfume-img {
+      margin: 0 auto;
+      align-items: center;
+    }
+  
+    .test-olfativo .btn-main,
+    .crear-perfume-info .btn-main {
+      align-self: center;
     }
   }
   
