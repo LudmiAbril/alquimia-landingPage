@@ -336,27 +336,42 @@ button {
   flex-shrink: 0;
 }
 
-.opciones button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--text-font);
-  background: white;
-  text-transform: uppercase;
-  color: #40403E;
-  border: none;
-  font-weight: bold;
-  padding: 0.75rem 1.25rem;
-  border-radius: 20px;
-  cursor: pointer;
-  height: 44px;
-  font-size: 20px;
-  transition: background 0.3s ease;
-  width: 185px;
-  text-align: left;
-  justify-content: center;
-}
-
+.btn-fragancia {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    background: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    width: 185px;
+    text-align: left;
+    font-family: var(--text-font);
+    text-transform: uppercase;
+    z-index: 1;
+  }
+  
+  /* Fondo GIF y overlay en hover */
+  .btn-fragancia:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* oscuro y semitransparente */
+    z-index: 1;
+  }
+  
+  .btn-fragancia:hover {
+    color: white;
+  }
+  .btn-fragancia .contenido-btn {
+    position: relative;
+    z-index: 2;
+  }
   
   /* Fondos personalizados en hover */
   .acuatica:hover {
@@ -368,17 +383,23 @@ button {
   
   
   .frutal:hover {
-    background-image: url('/img/fondos/frutal.jpg');
+    background-image: url('/img/fondos/calor.gif');
+    background-size: cover;
+    background-position: center;
     color: white;
   }
   
   .madera:hover {
-    background-image: url('/img/fondos/madera.jpg');
+    background-image: url('/img/fondos/otonio2.gif');
+    background-size: cover;
+    background-position: center;
     color: white;
   }
   
   .ambarada:hover {
-    background-image: url('/img/fondos/ambarada.jpg');
+    background-image: url('/img/fondos/invierno.gif');
+    background-size: cover;
+    background-position: center;
     color: white;
   }
   
