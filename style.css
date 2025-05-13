@@ -18,6 +18,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--bone);
 }
 
 main {
@@ -162,13 +163,12 @@ button {
   transition: 0.5s;
 }
 
-/*Intro*/
+/* /Intro/ */
 .intro {
   display: flex;
   background-color: #c5a2d4;
   color: white;
   max-height: 74vh;
-  /*56*/
   overflow: hidden;
 
   & .roses {
@@ -180,7 +180,7 @@ button {
     background-size: cover;
     width: 60%;
     height: 105vh;
-    /*80*/
+
   }
 
   & article {
@@ -206,7 +206,7 @@ button {
     color: #fff;
     position: relative;
   }
-  
+
   .reason h2::after {
     content: '';
     position: absolute;
@@ -218,18 +218,18 @@ button {
     border-radius: 2px;
     transition: width 1s ease-in-out;
   }
-  
+
   /* Se activa al hacer scroll */
   .reason h2.animate-underline::after {
     width: 75%;
   }
-  
+
   @keyframes underline-slide {
     from { width: 0; }
     to { width: 50%; }
   }
-  
-  
+
+
 .center {
   text-align: center;
 }
@@ -244,7 +244,7 @@ button {
   flex-direction: column;
 }
 
-/*STEPS*/
+/* /STEPS/ */
 .steps {
   & .title {
     margin: 7rem 0;
@@ -281,7 +281,7 @@ button {
 }
 
 /**/
-/*Proveedores*/
+/* /Proveedores/ */
 .providers-text {
   max-width: 60%;
   margin: 3rem auto;
@@ -313,7 +313,7 @@ button {
   justify-content: center;
 }
 
-/*Footer*/
+/* /Footer/ */
 .footer {
   background-color: #e8e3de;
   color: white;
@@ -347,7 +347,7 @@ button {
   }
 }
 
-/*SECCIONES COLORES*/
+/* /SECCIONES COLORES/ */
 .section-bone {
   background-color: var(--bone);
   padding: 80px 42px;
@@ -366,9 +366,10 @@ button {
   padding: 80px 42px;
   position: relative;
   z-index: 2;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
   color: white;
+
 }
 
 .overlapped {
@@ -411,9 +412,9 @@ button {
     text-decoration: underline;
     text-decoration-color: #9444b6;
     text-decoration-thickness: 2px;
-    text-underline-offset: 2px; 
+    text-underline-offset: 2px;
   }
-  
+
 .test-olfativo .btn-probar {
   align-self: center;
 }
@@ -527,24 +528,54 @@ button {
 .hidden {
     display: none !important;
   }
-  .btn-reiniciar {
-    margin-top: 1rem;
-    background: #fff;
-    color: #444;
-    border: 1px solid #ccc;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-reiniciar:hover {
-    background: #eee;
-  }
-  
-  .pocima-container svg .relleno {
-    transition: fill 0.5s ease;
-  }
+
+.btn-reiniciar {
+  margin-top: 1rem;
+  background: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+  background: #eee;
+}
+
+.pocima-container svg .relleno {
+  transition: fill 0.5s ease;
+}
+
+.question {
+  font-family: var(--text-font);
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.question-block{    display: flex
+    ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;}
+/* /ANIMACIONES/ */
+#animated-text {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.fade-word {
+  display: inline-block;
+  opacity: 0;
+}
+
+/*  brillo */
+.fade-in {
+  animation: fadeMagicIn 0.6s forwards;
+}
+
 
 /*-----------------------secciones insumo---------------------*/
 .insumos {
@@ -554,7 +585,7 @@ button {
 
 .insumos-container {
   display: flex;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .insumos-texto {
@@ -595,16 +626,23 @@ button {
 
 .insumos-imagen {
   width: 50%;
-  background-image: url('./img/insumos.png'); 
+  background-image: url('./img/insumos.png');
   background-size: cover;
   background-position: center;
 }
-.acordion{
-  max-width: 1200px; 
-  margin: auto; 
-  padding: 4rem 1rem;
+ .acordion{
+
+ margin-top: 4rem;
+} 
+.acordionContenedor{
+  max-width: 1800px;
+  margin: auto;
+  padding: 4rem 8rem;
   min-height: 600px;
+  background-color: white;
 }
+
+
 .accordion-header {
     width: 100%;
     text-align: left;
@@ -645,22 +683,7 @@ button {
   .accordion-item.active .arrow {
     transform: rotate(180deg);
   }
- 
-/*ANIMACIONES*/
-#animated-text {
-  display: inline-block;
-  font-weight: bold;
-}
 
-.fade-word {
-  display: inline-block;
-  opacity: 0;
-}
-
-/*  brillo */
-.fade-in {
-  animation: fadeMagicIn 0.6s forwards;
-}
 
 @keyframes fadeMagicIn {
   0% {
@@ -810,20 +833,20 @@ button {
       align-items: center;
       text-align: center;
     }
-  
+
     .footer .row img {
         max-width: 100px;
       margin: 0.5rem;
     }
-  
+
     .footer .footer-contain {
       padding: 2rem 1rem;
     }
-  
+
     .footer .column {
       align-items: center;
     }
-  
+
     .footer p {
       font-size: 14px;
     }
@@ -834,7 +857,7 @@ button {
       grid-template-columns: 1fr;
       text-align: center;
     }
-  
+
     .olfativo-info,
     .olfativo-interactivo,
     .crear-perfume-info,
@@ -842,10 +865,9 @@ button {
       margin: 0 auto;
       align-items: center;
     }
-  
+
     .test-olfativo .btn-main,
     .crear-perfume-info .btn-main {
       align-self: center;
     }
   }
-  
