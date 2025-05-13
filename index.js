@@ -72,21 +72,38 @@ const frases = [
     }
   };
   
-  // Carga SVG inline
-  async function cargarSVGInline(url) {
+  const svgPaths = [
+    "./img/potion/potion00.svg",
+    "./img/potion/potion01.svg",
+    "./img/potion/potion03.svg",
+    "./img/potion/potion04.svg"
+  ];
+  
+  async function cargarSVGInlineConColor(url, color) {
     const response = await fetch(url);
     const svgText = await response.text();
-    
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgText, "image/svg+xml");
     const svg = doc.querySelector("svg");
   
-    // Asegurar tamaño fijo por código
     svg.setAttribute("width", "250");
     svg.setAttribute("height", "250");
   
-    svgContainer.innerHTML = ""; // Limpiar anterior
+    // Aplicar color si encuentra elemento con clase "relleno"
+    const relleno = svg.querySelector(".relleno");
+    if (relleno) {
+      relleno.setAttribute("fill", color);
+    }
+  
+    svgContainer.innerHTML = "";
     svgContainer.appendChild(svg);
+  }
+  
+  async function animarLlenado(color) {
+    for (let i = 0; i < svgPaths.length; i++) {
+      await cargarSVGInlineConColor(svgPaths[i], color);
+      await new Promise(resolve => setTimeout(resolve, 300)); // 300ms entre cada etapa
+    }
   }
   
   
@@ -94,19 +111,14 @@ const frases = [
     btn.addEventListener("click", async () => {
       const tipo = btn.dataset.fragancia;
       const familia = familias[tipo];
+  
       if (familia) {
         resultadoTexto.textContent = familia.texto;
         resultadoFamilia.classList.remove("hidden");
         pregunta2.classList.add("hidden");
   
-        // Cargar el SVG correcto
-        await cargarSVGInline(`./img/potion/potion04.svg`);
-  
-        // Cambiar el color del líquido por clase "relleno"
-        const relleno = svgContainer.querySelector(".relleno");
-        if (relleno) {
-          relleno.setAttribute("fill", familia.color);
-        }
+        // Llenar poción con animación
+        await animarLlenado(familia.color);
       }
     });
   });
@@ -116,7 +128,8 @@ const frases = [
     resultadoFamilia.classList.add("hidden");
     pregunta2.classList.remove("hidden");
     resultadoTexto.textContent = "";
-    cargarSVGInline(`./img/potion/potion00.svg`);
+    cargarSVGInlineConColor("./img/potion/potion00.svg", "#00bfa6");
+
   });
-  
-  
+  // Mostrar poción vacía al inicio
+cargarSVGInlineConColor("./img/potion/potion00.svg", "#00bfa6");
