@@ -362,6 +362,106 @@ button {
   .pocima-container svg .relleno {
     transition: fill 0.5s ease;
   }
+
+/*-----------------------secciones insumo---------------------*/
+.insumos {
+  background-color: var(--bone);
+  padding: 0;
+}
+
+.insumos-container {
+  display: flex;
+  height: 100vh; 
+}
+
+.insumos-texto {
+  width: 50%;
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.insumos-texto h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: var(--title-font);
+
+}
+
+.insumos-texto p {
+  font-size: 22px;
+  line-height: 1.6;
+  font-family: var(--text-font);
+
+}
+
+.btn {
+  background-color: #9444B6;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  padding: 1rem 3rem;
+  margin: 3rem 0;
+  font-family: 'Roboto';
+  width: 32%;
+  justify-content: center;
+  font-family: var(--text-font);
+}
+
+.insumos-imagen {
+  width: 50%;
+  background-image: url('./img/insumos.png'); 
+  background-size: cover;
+  background-position: center;
+}
+.acordion{
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 4rem 1rem;
+  min-height: 600px;
+}
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: none;
+    border: none;
+    padding: 2.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    color:#40403E ;
+    font-family: var(--text-font);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 0;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 200px;
+    padding: 1rem 0;
+    font-family: var(--text-font);
+
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-item.active .arrow {
+    transform: rotate(180deg);
+  }
  
 /*ANIMACIONES*/
 #animated-text {
