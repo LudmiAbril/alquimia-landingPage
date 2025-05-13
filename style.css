@@ -362,10 +362,7 @@ button {
   .pocima-container svg .relleno {
     transition: fill 0.5s ease;
   }
-  .relleno {
-    fill: #00bfa6; /* color según la familia olfativa */
-  }
-    
+ 
 /*ANIMACIONES*/
 #animated-text {
     display: inline-block;
