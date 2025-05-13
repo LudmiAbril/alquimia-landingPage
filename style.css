@@ -121,6 +121,21 @@ button {
     text-align: center;
     font-weight: 600;
 }
+/*Intro*/
+.intro{
+    display: flex;
+    background-color: #C5A2D4;
+    color: white;
+    & .roses{
+        background-image: url("./img/Maskgroup.svg");
+    }
+    & h2{
+        font-family: 'Volkhov';
+    }
+    & p{
+        font-family: 'Roboto';
+    }
+}
 /*SECCIONES COLORES*/
 .section-bone {
     background-color: #E8E3DE;
