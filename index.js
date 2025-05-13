@@ -86,8 +86,8 @@ const frases = [
     const doc = parser.parseFromString(svgText, "image/svg+xml");
     const svg = doc.querySelector("svg");
   
-    svg.setAttribute("width", "250");
-    svg.setAttribute("height", "250");
+    svg.setAttribute("width", "300");
+    svg.setAttribute("height", "300");
   
     // Aplicar color si encuentra elemento con clase "relleno"
     const relleno = svg.querySelector(".relleno");
