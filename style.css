@@ -1,348 +1,492 @@
-@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-    --violet: #9444B6;
-    --lilac: #C5A2D4;
-    --bone: #E8E3DE;
-    --gray: #40403E;
-    --title-font: "Volkhov", serif;
-    --text-font: 'Roboto', sans-serif;
+  --violet: #9444b6;
+  --lilac: #c5a2d4;
+  --bone: #e8e3de;
+  --gray: #40403e;
+  --title-font: "Volkhov", serif;
+  --text-font: "Roboto", sans-serif;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: transparent;
-    color: white;
-    font-family: var(--text-font);
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0  42px;
-    padding-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: transparent;
+  color: white;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 42px;
+  padding-top: 10px;
 }
 
 .header-links-profile {
-    display: flex;
-    gap: 29px;
-    align-items: center;
+  display: flex;
+  gap: 29px;
+  align-items: center;
 }
 
 .header-links {
-    display: flex;
-    gap: 29px;
+  display: flex;
+  gap: 29px;
 }
 
 .header-links a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .profile-icon {
-    width: 35px;
+  width: 35px;
 }
 
 .logo {
-    width: 120px;
+  width: 120px;
 }
 
 .hero {
-    height: 100vh;
-    background-image: url("./img/Group\ 72.png");
-    background-size: cover;
-    background-position: center;    /* centra la imagen */
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  height: 100vh;
+  background-image: url("./img/Group\ 72.png");
+  background-size: cover;
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .title {
-    font-family: var(--title-font);
-    font-size: 36px;
-    text-transform: uppercase;
+  font-family: var(--title-font);
+  font-size: 36px;
+  text-transform: uppercase;
 }
 
 .hero-title {
-    color: white;
-    width: 657px;
-    margin-bottom: 39px;
+  color: white;
+  width: 657px;
+  margin-bottom: 39px;
 }
 
 .hero-text {
-    color: white;
-    width: 479px;
-    margin-bottom: 85px;
-    font-weight: 400;
+  color: white;
+  width: 479px;
+  margin-bottom: 85px;
+  font-weight: 400;
 }
 
 .hero-texts-box {
-    margin-left: 144px;
+  margin-left: 144px;
 }
 
-
 .text {
-    font-family: var(--text-font);
-    font-size: 24px;
+  font-family: var(--text-font);
+  font-size: 24px;
+}
+
+.text-small {
+  font-family: var(--text-font);
+  font-size: 20px;
+  font-style: italic;
+}
+.text-medium {
+  font-family: var(--text-font);
+  font-size: 21px;
+  text-align: start;
+}
+.texto-resultado {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1px;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.texto-resultado span {
+  display: inline-block;
+  opacity: 0;
+  animation: magic-fade 1s forwards;
 }
 
 button {
-    all: unset;
-    cursor: pointer;
+  all: unset;
+  cursor: pointer;
 }
-
+.btn-main {
+  background-color: var(--violet);
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  padding: 1rem 3rem;
+  margin: 3rem 0;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  width: 200px;
+}
 .cto-btn {
-    background-color: var(--violet);
-    color: white;
-    font-family: var(--text-font);
-    width: 283px;
-    height: 58px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
+  background-color: var(--violet);
+  color: white;
+  font-family: var(--text-font);
+  width: 283px;
+  height: 58px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
 }
 /*Intro*/
-.intro{
-    display: flex;
-    background-color: #C5A2D4;
-    color: white;
-    max-height: 74vh;/*56*/
-    overflow: hidden;
-    & .roses{
-        margin-top: -39vh;
-        margin-left: -5vh;
-        background-image: url('../img/Maskgroup.svg');
-        background-position: top left;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 60%;
-        height: 105vh;/*80*/
-        }
-        & article{
-            width: 50%;
-        }
-    & .reason{
-        max-width: 33%;
-    }
-    & h2{
-        font-family: 'Volkhov';
-    }
-    & p{
-        font-family: 'Roboto';
-    }
+.intro {
+  display: flex;
+  background-color: #c5a2d4;
+  color: white;
+  max-height: 74vh; /*56*/
+  overflow: hidden;
+  & .roses {
+    margin-top: -39vh;
+    margin-left: -5vh;
+    background-image: url("../img/Maskgroup.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 105vh; /*80*/
+  }
+  & article {
+    width: 50%;
+  }
+  & .reason {
+    max-width: 33%;
+    margin-top: 5%;
+  }
+  & h2 {
+    font-family: "Volkhov";
+  }
+  & p {
+    font-family: "Roboto";
+  }
 }
-.title{
-    font-family: 'Volkhov';
+
+.reason h2 {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+  }
+  
+  .reason h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #fff, #ffc1fa);
+    border-radius: 2px;
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Se activa al hacer scroll */
+  .reason h2.animate-underline::after {
+    width: 75%;
+  }
+  
+  @keyframes underline-slide {
+    from { width: 0; }
+    to { width: 50%; }
+  }
+  
+  
+.center {
+  text-align: center;
 }
-.center{
-    text-align: center;
+.row {
+  display: flex;
+  flex-direction: row;
 }
-.row{
-    display: flex;
-    flex-direction: row;
-}
-.column{
-    display: flex;
-    flex-direction: column;
+.column {
+  display: flex;
+  flex-direction: column;
 }
 /*STEPS*/
-.steps{
-    & .title{
-        margin: 7rem 0;
+.steps {
+  & .title {
+    margin: 7rem 0;
+  }
+  & .row {
+    justify-content: space-evenly;
+    align-items: center;
+    & .column {
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      max-width: 210px;
+      & img {
+        width: 150px;
+        height: 150px;
+      }
     }
-    & .row{
-        justify-content: space-evenly;
-        align-items: center;
-        & .column{
-            padding: 1rem;
-            justify-content: center;
-            align-items: center;
-            max-width: 210px;
-            & img{
-                width: 150px;
-                height: 150px;
-            }
-        }
-    }
-    & p{
-        font-family: 'Roboto';
-        font-weight: bold;
-        font-size: 24px;
-        text-align: center;
-        
-    }
-    & .phrase{
-        margin: 5rem 0;
-        font-size: 24px;
-    }
+  }
+  & p {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+  & .phrase {
+    margin: 5rem 0;
+    font-size: 24px;
+  }
 }
 /**/
 /*Proveedores*/
-.providers-text{
-    
-    max-width: 60%;
-    margin: 3rem auto;
-    & p{
-        text-align: left;
-        margin: 2rem 0;
-    }
+.providers-text {
+  max-width: 60%;
+  margin: 3rem auto;
+  & p {
+    text-align: left;
+    margin: 2rem 0;
+  }
 }
-.providers-contact{
-
-    & h2{
-        margin-top: 10rem;
-    }
-    & .btn-main{
-        background-color: #9444B6;
-        color: white;
-        border-radius: 10px;
-        outline: none;
-        padding: 1rem 3rem;
-        margin: 3rem 0;
-        font-family: 'Roboto';
-    }
-    
+.providers-contact {
+  & h2 {
+    margin-top: 10rem;
+  }
+  & .btn-main {
+    background-color: #9444b6;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    padding: 1rem 3rem;
+    margin: 3rem 0;
+    font-family: "Roboto";
+  }
 }
-.provider-btn{
-    display: flex;
-    justify-content: center;
+.provider-btn {
+  display: flex;
+  justify-content: center;
 }
 /*Footer*/
-.footer{
-    background-color: #E8E3DE;
-    color: white;
-    
-    
-    & .footer-contain{
-        background-color: #9444B6;
-        border-radius: 5rem 5rem 0 0;
-        padding: 2rem 4rem 1rem;
-    }
-    .row{
-        justify-content: space-between;
-        & p{
+.footer {
+  background-color: #e8e3de;
+  color: white;
 
-            & a{
-                color: white;
-                text-decoration: none;
-            }
-        }
-        img{
-            cursor: pointer;
-        }
+  & .footer-contain {
+    background-color: #9444b6;
+    border-radius: 5rem 5rem 0 0;
+    padding: 2rem 4rem 1rem;
+  }
+  .row {
+    justify-content: space-between;
+    & p {
+      & a {
+        color: white;
+        text-decoration: none;
+      }
     }
-    .footer-contain{
-
-        & .hr{
-            
-            border: 1px solid #E8E3DE;
-            height: 2px; 
-        }
+    img {
+      cursor: pointer;
     }
+  }
+  .footer-contain {
+    & .hr {
+      border: 1px solid #e8e3de;
+      height: 2px;
+    }
+  }
 }
 /*SECCIONES COLORES*/
 .section-bone {
-    background-color: #E8E3DE;
-    padding: 80px 42px;
-    position: relative;
-    z-index: 1;
-    margin-top: -100px; 
-  }
-  
-  .section-lilac {
-    background-color: #C5A2D4;
-    padding: 80px 42px;
-    position: relative;
-    z-index: 2;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    color: white;
-  }
-  
-  .overlapped {
-    background-color: #C5A2D4;
-    padding: 80px 42px;
-    margin-top: -40px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    z-index: 2;
-  }
+  background-color: var(--bone);
+  padding: 80px 42px;
+  position: relative;
+  z-index: 1;
+  margin-top: -100px;
+}
 
-  /*SECTION LILA*/
-  .grid-olfativo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
+.section-lilac {
+  background-color: var(--lilac);
+  padding: 80px 42px;
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  color: white;
+}
+
+.overlapped {
+  background-color: var(--lilac);
+  padding: 80px 42px;
+  margin-top: -40px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  z-index: 2;
+}
+
+.grid-olfativo,
+.grid-perfume {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem 5vw;
+}
+.pocima-container{display: flex
+    ;
+        align-items: center;
+        justify-content: center;}
+
+.olfativo-info,
+.olfativo-interactivo,
+.crear-perfume-info,
+.crear-perfume-img {
+  margin-left: 0;
+  margin-right: 0;
+}
+.btn-probar{
+    color: #9444b6;
+    border :none;
+    background-color: transparent;
+    font-family: var(--text-font);
+    margin-top: 2%;
+}
+.btn-probar:hover {
+    text-decoration: underline;
+    text-decoration-color: #9444b6;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px; 
   }
   
-  .olfativo-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .olfativo-interactivo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .pocima-container object {
-    max-width: 100%;
-  }
-  
-  .opciones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .opciones button {
-    background: white;
-    color: #333;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-  }
-  
-  .opciones button:hover {
-    background: #f0f0f0;
-  }
-  
-  .resultado-olfativo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  
-  .hidden {
-    display: none;
+.test-olfativo .btn-probar {
+  align-self: center;
+}
+
+.crear-perfume-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.crear-perfume-img img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.opciones {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* dos columnas */
+  justify-content: center; /* centra las columnas horizontalmente */
+  gap: 1rem 2rem; /* fila/columna */
+}
+
+.btn-fragancia {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #333;
+  background: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  width: 185px;
+  text-align: left;
+  font-family: var(--text-font);
+  text-transform: uppercase;
+  z-index: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* Fondo GIF y overlay en hover */
+.btn-fragancia:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* oscuro y semitransparente */
+  z-index: 1;
+}
+
+.btn-fragancia:hover {
+  color: white;
+}
+.btn-fragancia .contenido-btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondos personalizados en hover */
+.acuatica:hover {
+  background-image: url("/img/fondos/acuatica.gif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.frutal:hover {
+  background-image: url("/img/fondos/calor.gif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.madera:hover {
+  background-image: url("/img/fondos/otonio2.gif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.ambarada:hover {
+  background-image: url("/img/fondos/invierno.gif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.resultado-olfativo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.hidden {
+    display: none !important;
   }
   .btn-reiniciar {
     margin-top: 1rem;
@@ -465,48 +609,197 @@ button {
  
 /*ANIMACIONES*/
 #animated-text {
-    display: inline-block;
-    font-weight: bold;
-  }
-  .fade-word {
-    display: inline-block;
+  display: inline-block;
+  font-weight: bold;
+}
+.fade-word {
+  display: inline-block;
+  opacity: 0;
+}
+
+/*  brillo */
+.fade-in {
+  animation: fadeMagicIn 0.6s forwards;
+}
+
+@keyframes fadeMagicIn {
+  0% {
     opacity: 0;
+    transform: translateY(8px) scale(0.95);
+    filter: blur(2px) brightness(1.8);
   }
-  
-  /*  brillo */
-  .fade-in {
-    animation: fadeMagicIn 0.6s forwards;
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0) brightness(1);
   }
-  
-  @keyframes fadeMagicIn {
-    0% {
-      opacity: 0;
-      transform: translateY(8px) scale(0.95);
-      filter: blur(2px) brightness(1.8);
+}
+
+/* Salida mágica con brillo decreciente */
+.fade-out {
+  animation: fadeMagicOut 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeMagicOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0) brightness(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+    filter: blur(2px) brightness(1.3);
+  }
+}
+
+@keyframes magic-fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.2) rotate(2deg);
+    filter: brightness(1.5) drop-shadow(0 0 4px #fff6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+    filter: brightness(1) drop-shadow(0 0 2px #fff3);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .header-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background-position: center top;
+  }
+
+  .hero-texts-box {
+    margin: 0;
+    width: 100%;
+  }
+
+  .hero-title,
+  .hero-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .intro {
+    flex-direction: column;
+    & .roses {
+      width: 100%;
+      height: 300px;
+      margin: 0;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      filter: blur(0) brightness(1);
+    & .reason {
+      max-width: 90%;
+      width: 100%;
+      padding: 1rem;
     }
   }
-  
-  /* Salida mágica con brillo decreciente */
-  .fade-out {
-    animation: fadeMagicOut 0.7s ease-in-out forwards;
+
+  .steps .row {
+    flex-direction: column;
+    gap: 2rem;
   }
-  
-  @keyframes fadeMagicOut {
-    0% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      filter: blur(0) brightness(1);
+
+  .grid-olfativo {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .olfativo-info,
+  .olfativo-interactivo {
+    margin: 0;
+    align-items: center;
+  }
+
+  .opciones {
+    display: flex;
+
+    gap: 1rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-fragancia {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .resultado-olfativo {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .footer .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+    .footer .row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    100% {
-      opacity: 0;
-      transform: translateY(-4px) scale(0.98);
-      filter: blur(2px) brightness(1.3);
+  
+    .footer .row img {
+        max-width: 100px;
+      margin: 0.5rem;
+    }
+  
+    .footer .footer-contain {
+      padding: 2rem 1rem;
+    }
+  
+    .footer .column {
+      align-items: center;
+    }
+  
+    .footer p {
+      font-size: 14px;
     }
   }
+  @media (max-width: 768px) {
+    .grid-olfativo,
+    .grid-perfume {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
   
+    .olfativo-info,
+    .olfativo-interactivo,
+    .crear-perfume-info,
+    .crear-perfume-img {
+      margin: 0 auto;
+      align-items: center;
+    }
+  
+    .test-olfativo .btn-main,
+    .crear-perfume-info .btn-main {
+      align-self: center;
+    }
+  }
   
