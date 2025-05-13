@@ -68,7 +68,7 @@ setInterval(() => {
 const botonesClima = document.querySelectorAll(".opciones button");
 const resultadoTexto = document.querySelector(".texto-resultado");
 const resultadoFamilia = document.getElementById("resultadoFamilia");
-const pregunta2 = document.getElementById("pregunta2");
+const pregunta2 = document.getElementById("preguntaBlock");
 const svgContainer = document.querySelector(".pocima-container");
 const reiniciarBtn = document.getElementById("btnReiniciar");
 

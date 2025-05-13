@@ -202,39 +202,34 @@ button {
 }
 
 .reason h2 {
-  font-size: 40px;
-  color: #fff;
-  position: relative;
-}
-
-.reason h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0;
-  height: 4px;
-  background: linear-gradient(to right, #fff, #ffc1fa);
-  border-radius: 2px;
-  transition: width 1s ease-in-out;
-}
-
-/* Se activa al hacer scroll */
-.reason h2.animate-underline::after {
-  width: 50%;
-}
-
-@keyframes underline-slide {
-  from {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+  }
+  
+  .reason h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
     width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #fff, #ffc1fa);
+    border-radius: 2px;
+    transition: width 1s ease-in-out;
   }
-
-  to {
-    width: 50%;
+  
+  /* Se activa al hacer scroll */
+  .reason h2.animate-underline::after {
+    width: 75%;
   }
-}
-
-
+  
+  @keyframes underline-slide {
+    from { width: 0; }
+    to { width: 50%; }
+  }
+  
+  
 .center {
   text-align: center;
 }
@@ -385,39 +380,59 @@ button {
   z-index: 2;
 }
 
-/*SECTION LILA*/
-.grid-olfativo {
+.grid-olfativo,
+.grid-perfume {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.olfativo-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.olfativo-interactivo {
-  display: flex;
-  flex-direction: column;
+  gap: 4rem;
   align-items: center;
-  gap: 2rem;
+  padding: 3rem 5vw;
 }
+.pocima-container{display: flex
+    ;
+        align-items: center;
+        justify-content: center;}
 
 .olfativo-info,
-.olfativo-interactivo {
+.olfativo-interactivo,
+.crear-perfume-info,
+.crear-perfume-img {
+  margin-left: 0;
+  margin-right: 0;
+}
+.btn-probar{
+    color: #9444b6;
+    border :none;
+    background-color: transparent;
+    font-family: var(--text-font);
+    margin-top: 2%;
+}
+.btn-probar:hover {
+    text-decoration: underline;
+    text-decoration-color: #9444b6;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px; 
+  }
+  
+.test-olfativo .btn-probar {
+  align-self: center;
+}
+
+.crear-perfume-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  margin-left: 80px;
 }
 
-.pocima-container object {
-  max-width: 100%;
+.crear-perfume-img img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
 }
+
+
 
 .opciones {
   display: grid;
@@ -510,9 +525,9 @@ button {
 }
 
 .hidden {
-  display: none;
-}
-
+    display: none !important;
+  }
+  
 .btn-reiniciar {
   margin-top: 1rem;
   background: #fff;
@@ -539,7 +554,11 @@ button {
   text-transform: uppercase;
   font-size: 20px;
 }
-
+.question-block{    display: flex
+    ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;}
 /*ANIMACIONES*/
 #animated-text {
   display: inline-block;
@@ -699,26 +718,47 @@ button {
 }
 
 @media (max-width: 768px) {
-  .footer .row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    .footer .row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer .row img {
+        max-width: 100px;
+      margin: 0.5rem;
+    }
+  
+    .footer .footer-contain {
+      padding: 2rem 1rem;
+    }
+  
+    .footer .column {
+      align-items: center;
+    }
+  
+    .footer p {
+      font-size: 14px;
+    }
   }
-
-  .footer .row img {
-    max-width: 100px;
-    margin: 0.5rem;
+  @media (max-width: 768px) {
+    .grid-olfativo,
+    .grid-perfume {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .olfativo-info,
+    .olfativo-interactivo,
+    .crear-perfume-info,
+    .crear-perfume-img {
+      margin: 0 auto;
+      align-items: center;
+    }
+  
+    .test-olfativo .btn-main,
+    .crear-perfume-info .btn-main {
+      align-self: center;
+    }
   }
-
-  .footer .footer-contain {
-    padding: 2rem 1rem;
-  }
-
-  .footer .column {
-    align-items: center;
-  }
-
-  .footer p {
-    font-size: 14px;
-  }
-}
+  
