@@ -121,6 +121,32 @@ button {
     text-align: center;
     font-weight: 600;
 }
+/*SECCIONES COLORES*/
+.section-bone {
+    background-color: #E8E3DE;
+    padding: 80px 42px;
+    position: relative;
+    z-index: 1;
+    margin-top: -100px; 
+  }
+  
+  .section-lilac {
+    background-color: #C5A2D4;
+    padding: 80px 42px;
+    position: relative;
+    z-index: 2;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+  
+  .overlapped {
+    background-color: #C5A2D4;
+    padding: 80px 42px;
+    margin-top: -40px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    z-index: 2;
+  }
 
 /*ANIMACIONES*/
 #animated-text {
