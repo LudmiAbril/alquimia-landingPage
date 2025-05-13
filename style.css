@@ -181,6 +181,7 @@ button {
   }
   & .reason {
     max-width: 33%;
+    margin-top: 5%;
   }
   & h2 {
     font-family: "Volkhov";
