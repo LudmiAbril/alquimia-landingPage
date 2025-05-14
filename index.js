@@ -25,7 +25,8 @@ function mostrarTooltip(e, tipo) {
   if (!familia) return;
 
   tooltip.querySelector(".tooltip-texto").textContent = familia.descripcion;
-  tooltip.querySelector(".tooltip-img").src = familia.imagen;
+  //tooltip.querySelector(".tooltip-img").src = familia.imagen;
+  tooltip.querySelector(".tooltip-img").setAttribute("src", `${familia.imagen}`);
 
   tooltip.style.display = "block";
   tooltip.style.opacity = "1";
@@ -38,8 +39,8 @@ function ocultarTooltip() {
   tooltip.style.display = "none";
   tooltip.style.opacity = "0";
 }
-
-
+//tipoSeleccionado = "acuatica";
+/* 
 // Delegar eventos al contenedor #resultadoFamilia
 resultadoFamilia.addEventListener("mouseover", (e) => {
   if (tipoSeleccionado && tooltip) {
@@ -60,6 +61,29 @@ resultadoFamilia.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("texto-resultado") && tipoSeleccionado && tooltip) {
     mostrarTooltip(e, tipoSeleccionado);
   }
+}); */
+// Escuchar hover dentro de #resultadoFamilia
+resultadoFamilia.addEventListener("mouseover", (e) => {
+  const hovered = e.target;
+
+  if (
+    hovered.classList.contains("texto-resultado") &&
+    hovered.dataset.tipo &&//tipoSeleccionado &&
+    tooltip
+  ) {
+    mostrarTooltip(e, hovered.dataset.tipo);//tipoSeleccionado);
+  }
+});
+
+resultadoFamilia.addEventListener("mousemove", (e) => {
+  if (tooltip.style.display === "block") {
+    tooltip.style.top = `${e.pageY + 15}px`;
+    tooltip.style.left = `${e.pageX + 15}px`;
+  }
+});
+
+resultadoFamilia.addEventListener("mouseleave", () => {
+  ocultarTooltip();
 });
 
 
@@ -129,7 +153,7 @@ const familias = {
     texto: "Marinas/Cítricas.",
     color: "#66cccc",
     descripcion: "Fragancias frescas inspiradas en el mar, ideales para días cálidos.",
-    imagen: "./img/familias/acuatica.jpg"
+    imagen: "../img/familias/acuatica.jpeg"
   },
   frutal: {
     texto: "Frutales/Florales.",
@@ -141,13 +165,13 @@ const familias = {
     texto: "Amaderadas/Especiadas.",
     color: "#cc9966",
     descripcion: "Aromas cálidos y terrosos, elegantes y envolventes.",
-    imagen: "./img/familias/madera.jpg"
+    imagen: "./img/familias/madera.jpeg"
   },
   ambarada: {
     texto: "Gourmand/Ambaradas.",
     color: "#9966cc",
     descripcion: "Esencias dulces, profundas y sensuales como la vainilla y el ámbar.",
-    imagen: "./img/familias/ambarada.jpg"
+    imagen: "./img/familias/ambarada.jpeg"
   }
 };
 
@@ -197,6 +221,7 @@ botonesClima.forEach(btn => {
     resultadoTexto.textContent = "";
     resultadoFamilia.classList.remove("hidden");
     pregunta2.classList.add("hidden");
+    resultadoTexto.setAttribute("data-tipo", tipo);
 
     // Texto animado mágico
     familia.texto.split("").forEach((char, i) => {
