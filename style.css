@@ -361,26 +361,34 @@ button {
   font-style: italic;
 }
 
+
 .section-lilac {
-  background-color: var(--lilac);
-  padding: 80px 42px;
-  position: relative;
-  z-index: 2;
-  border-top-left-radius: 300px;
-  border-top-right-radius: 300px;
-  color: white;
-
-}
-
-.overlapped {
-  background-color: var(--lilac);
-  padding: 80px 42px;
-  margin-top: -40px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  z-index: 2;
-}
-
+    background-color: var(--lilac);
+    padding: 80px 42px;
+    position: relative;
+    z-index: 2;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    color: white;
+  }
+  .section-lilac-2 {
+    background-color: var(--lilac);
+    padding: 80px 42px;
+    position: relative;
+    z-index: 2;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    color: white;
+  }
+  
+  .overlapped {
+    background-color: var(--lilac);
+    padding: 80px 42px;
+    margin-top: -40px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    z-index: 2;
+  }
 .grid-olfativo,
 .grid-perfume {
   display: grid;
