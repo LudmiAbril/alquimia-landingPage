@@ -112,6 +112,8 @@ header {
   font-family: var(--text-font);
   font-size: 20px;
   font-style: italic;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .text-medium {
@@ -460,8 +462,7 @@ button {
 .crear-perfume-img {
   margin-left: 0;
   margin-right: 0;
-}
-.btn-probar {
+}.btn-probar {
     color: #9444b6;
     border: 2px solid transparent;
     background-color: transparent;
@@ -473,14 +474,24 @@ button {
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
   
   .btn-probar:hover {
     border-color: #9444b6;
     background-color: rgba(148, 68, 182, 0.1);
-    text-decoration: none;
     transform: scale(1.03);
   }
+  
+  /* ÍCONO MÁS GORDITO Y VISIBLE */
+  .icono-probar {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
   
 
 .test-olfativo .btn-probar {
@@ -559,7 +570,10 @@ button {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-
+.btn-fragancia i {
+    font-size: 18px;
+    margin-right: 8px;
+  }
 /* Fondo GIF y overlay en hover */
 .btn-fragancia:hover::after {
   content: "";
