@@ -123,17 +123,55 @@ header {
 }
 
 .texto-resultado {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #fff;
-  letter-spacing: 1px;
-  display: inline-block;
-  overflow: hidden;
-  margin: 0;
-  white-space: nowrap;
-}
-
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 1px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    white-space: nowrap;
+    position: relative;
+    animation: hintHover 1.5s ease-in-out 1;
+    cursor: pointer;
+  }
+  
+  /* ANIMACIÓN INICIAL DE INDICACIÓN */
+  @keyframes hintHover {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* EFECTO BRILLO EN HOVER */
+  .texto-resultado::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .texto-resultado:hover::after {
+    animation: shine 2.5s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
 .texto-resultado span {
   display: inline-block;
   opacity: 0;
@@ -424,18 +462,26 @@ button {
   margin-right: 0;
 }
 .btn-probar {
-  color: #9444b6;
-  border: none;
-  background-color: transparent;
-  font-family: var(--text-font);
-  margin-top: 2%;
-}
-.btn-probar:hover {
-  text-decoration: underline;
-  text-decoration-color: #9444b6;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
+    color: #9444b6;
+    border: 2px solid transparent;
+    background-color: transparent;
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2%;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-probar:hover {
+    border-color: #9444b6;
+    background-color: rgba(148, 68, 182, 0.1);
+    text-decoration: none;
+    transform: scale(1.03);
+  }
+  
 
 .test-olfativo .btn-probar {
   align-self: center;
