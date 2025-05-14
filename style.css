@@ -154,12 +154,12 @@ button {
   font-family: var(--text-font);
   text-transform: uppercase;
   width: 200px;
-   font-weight: 600;
+  font-weight: 600;
 }
 
 .cto-btn:hover {
   background-color: var(--hoverViolet);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
 }
 
@@ -180,7 +180,6 @@ button {
     background-size: cover;
     width: 60%;
     height: 105vh;
-
   }
 
   & article {
@@ -202,33 +201,36 @@ button {
 }
 
 .reason h2 {
-    font-size: 40px;
-    color: #fff;
-    position: relative;
-  }
+  font-size: 40px;
+  color: #fff;
+  position: relative;
+}
 
-  .reason h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
+.reason h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to right, #fff, #ffc1fa);
+  border-radius: 2px;
+  transition: width 1s ease-in-out;
+}
+
+/* Se activa al hacer scroll */
+.reason h2.animate-underline::after {
+  width: 75%;
+}
+
+@keyframes underline-slide {
+  from {
     width: 0;
-    height: 4px;
-    background: linear-gradient(to right, #fff, #ffc1fa);
-    border-radius: 2px;
-    transition: width 1s ease-in-out;
   }
-
-  /* Se activa al hacer scroll */
-  .reason h2.animate-underline::after {
-    width: 75%;
+  to {
+    width: 50%;
   }
-
-  @keyframes underline-slide {
-    from { width: 0; }
-    to { width: 50%; }
-  }
-
+}
 
 .center {
   text-align: center;
@@ -318,6 +320,9 @@ button {
 .footer {
   background-color: #e8e3de;
   color: white;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 500;
 
   & .footer-contain {
     background-color: #9444b6;
@@ -370,7 +375,6 @@ button {
   position: relative;
   z-index: 2;
   color: white;
-
 }
 .section-bordesTop {
   border-top-left-radius: 300px;
@@ -384,7 +388,6 @@ button {
   border-bottom-right-radius: 100px;
   z-index: 2;
 }
-
 .grid-olfativo,
 .grid-perfume {
   display: grid;
@@ -393,10 +396,23 @@ button {
   align-items: center;
   padding: 3rem 5vw;
 }
-.pocima-container{display: flex
-    ;
-        align-items: center;
-        justify-content: center;}
+.pocima-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 300px; /* o igual al tamaño del frasco */
+  }
+  
+.pocima-container svg {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  transition: filter 0.4s ease;
+}
+
+.pocima-container svg.activated {
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5))
+    drop-shadow(0 0 40px currentColor);
+}
 
 .olfativo-info,
 .olfativo-interactivo,
@@ -405,19 +421,19 @@ button {
   margin-left: 0;
   margin-right: 0;
 }
-.btn-probar{
-    color: #9444b6;
-    border :none;
-    background-color: transparent;
-    font-family: var(--text-font);
-    margin-top: 2%;
+.btn-probar {
+  color: #9444b6;
+  border: none;
+  background-color: transparent;
+  font-family: var(--text-font);
+  margin-top: 2%;
 }
 .btn-probar:hover {
-    text-decoration: underline;
-    text-decoration-color: #9444b6;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
-  }
+  text-decoration: underline;
+  text-decoration-color: #9444b6;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
 
 .test-olfativo .btn-probar {
   align-self: center;
@@ -437,8 +453,6 @@ button {
   margin: 0 auto;
 }
 
-
-
 .opciones {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -452,23 +466,22 @@ button {
 .btn-fragancia {
   display: flex;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-  color: #333;
-  background: white;
-  border: none;
+  align-items: center;
   padding: 0.75rem 1.25rem;
-  border-radius: 20px;
-  cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
-  width: 185px;
-  text-align: left;
   font-family: var(--text-font);
   text-transform: uppercase;
-  z-index: 1;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: white;
+  color: var(--violet);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 185px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 /* Fondo GIF y overlay en hover */
@@ -495,6 +508,7 @@ button {
   background-image: url("/img/fondos/acuatica.gif");
   background-size: cover;
   background-position: center;
+  box-shadow: 0 0 12px #66cccc99;
   color: white;
 }
 
@@ -503,6 +517,7 @@ button {
   background-size: cover;
   background-position: center;
   color: white;
+  box-shadow: 0 0 12px #ff669999;
 }
 
 .madera:hover {
@@ -510,6 +525,7 @@ button {
   background-size: cover;
   background-position: center;
   color: white;
+  box-shadow: 0 0 12px #cc996699;
 }
 
 .ambarada:hover {
@@ -517,6 +533,7 @@ button {
   background-size: cover;
   background-position: center;
   color: white;
+  box-shadow: 0 0 12px #9966cc99;
 }
 
 .resultado-olfativo {
@@ -530,8 +547,8 @@ button {
 }
 
 .hidden {
-    display: none !important;
-  }
+  display: none !important;
+}
 
 .btn-reiniciar {
   margin-top: 1rem;
@@ -559,11 +576,12 @@ button {
   text-transform: uppercase;
   font-size: 20px;
 }
-.question-block{    display: flex
-    ;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;}
+.question-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* /ANIMACIONES/ */
 #animated-text {
   display: inline-block;
@@ -579,7 +597,6 @@ button {
 .fade-in {
   animation: fadeMagicIn 0.6s forwards;
 }
-
 
 /*-----------------------secciones insumo---------------------*/
 .insumos {
@@ -605,24 +622,22 @@ button {
   font-weight: bold;
   margin-bottom: 20px;
   font-family: var(--title-font);
-
 }
 
 .insumos-texto p {
   font-size: 22px;
   line-height: 1.6;
   font-family: var(--text-font);
-
 }
 
 .btn {
-  background-color: #9444B6;
+  background-color: #9444b6;
   color: white;
   border-radius: 10px;
   outline: none;
   padding: 1rem 3rem;
   margin: 3rem 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   width: 32%;
   justify-content: center;
   font-family: var(--text-font);
@@ -630,7 +645,7 @@ button {
 
 .insumos-imagen {
   width: 50%;
-  background-image: url('./img/insumos.png');
+  background-image: url("./img/insumos.png");
   background-size: cover;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -690,6 +705,56 @@ button {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
+}
+.acordion {
+  margin-top: 4rem;
+}
+.acordionContenedor {
+  max-width: 1800px;
+  margin: auto;
+  padding: 4rem 8rem;
+  min-height: 600px;
+  background-color: white;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  padding: 2.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  color: #40403e;
+  font-family: var(--text-font);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  padding: 1rem 0;
+  font-family: var(--text-font);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
 }
 
 .faq-question {
@@ -880,46 +945,119 @@ button {
 }
 
 @media (max-width: 768px) {
-    .footer .row {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .footer .row img {
-        max-width: 100px;
-      margin: 0.5rem;
-    }
+  .footer .row img {
+    max-width: 100px;
+    margin: 0.5rem;
+  }
 
-    .footer .footer-contain {
-      padding: 2rem 1rem;
-    }
+  .footer .footer-contain {
+    padding: 2rem 1rem;
+  }
 
-    .footer .column {
-      align-items: center;
-    }
+  .footer .column {
+    align-items: center;
+  }
 
-    .footer p {
-      font-size: 14px;
+  .footer p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .grid-olfativo,
+  .grid-perfume {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .olfativo-info,
+  .olfativo-interactivo,
+  .crear-perfume-info,
+  .crear-perfume-img {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .test-olfativo .btn-main,
+  .crear-perfume-info .btn-main {
+    align-self: center;
+  }
+}
+.magic-bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.magic-bubbles::before,
+.magic-bubbles::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: floatUp 3s infinite ease-in-out;
+}
+
+.magic-bubbles::before {
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  top: 60%;
+  animation-delay: 0s;
+}
+
+.magic-bubbles::after {
+  width: 6px;
+  height: 6px;
+  left: 60%;
+  top: 65%;
+  animation-delay: 1s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
+  }
+}
+/* Animación de estrellas flotantes mágicas */
+.estrella {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: estrellaFlotar 4s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 4;
+  }
+  
+  @keyframes estrellaFlotar {
+    0% {
+      transform: translateY(0) scale(0.5);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(1.2);
+      opacity: 0;
     }
   }
-  @media (max-width: 768px) {
-    .grid-olfativo,
-    .grid-perfume {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .olfativo-info,
-    .olfativo-interactivo,
-    .crear-perfume-info,
-    .crear-perfume-img {
-      margin: 0 auto;
-      align-items: center;
-    }
-
-    .test-olfativo .btn-main,
-    .crear-perfume-info .btn-main {
-      align-self: center;
-    }
+  .estrella {
+    background: radial-gradient(circle, white, #ffc0f7); /* mejor visibilidad */
   }
+  

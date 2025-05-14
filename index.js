@@ -109,10 +109,12 @@ async function animarLlenado(color) {
   for (let i = 0; i < svgPaths.length; i++) {
     await cargarSVGInlineConColor(svgPaths[i], color);
     await new Promise(resolve => setTimeout(resolve, 300));
+    // 🔊 Reproducir sonido al finalizar animación
+    const sonido = document.getElementById("magicSound");
+    if (sonido) sonido.play();
   }
 }
 
-// Evento click en cada botón del test
 botonesClima.forEach(btn => {
   btn.addEventListener("click", async () => {
     const tipo = btn.dataset.fragancia;
@@ -123,7 +125,7 @@ botonesClima.forEach(btn => {
     resultadoFamilia.classList.remove("hidden");
     pregunta2.classList.add("hidden");
 
-    // Animar texto mágico
+    // Texto animado mágico
     familia.texto.split("").forEach((char, i) => {
       const span = document.createElement("span");
       span.textContent = char;
@@ -132,9 +134,33 @@ botonesClima.forEach(btn => {
       resultadoTexto.appendChild(span);
     });
 
+    // Llenar frasco paso a paso
     await animarLlenado(familia.color);
+
+    // Agregar clase mágica al SVG
+    const svg = svgContainer.querySelector("svg");
+    svg.classList.add("activated");
+    svg.style.color = familia.color;
+
+ 
+
+    // Agregar estrellas mágicas
+    for (let i = 0; i < 10; i++) {
+      
+      const estrella = document.createElement("span");
+      estrella.classList.add("estrella");
+      estrella.style.left = `${Math.random() * 80 + 10}%`;
+      estrella.style.bottom = `${Math.random() * 40 + 10}px`;
+      estrella.style.animationDelay = `${Math.random() * 2}s`;
+      svgContainer.appendChild(estrella);
+      
+      
+      // Eliminarla después de animarse
+      setTimeout(() => estrella.remove(), 4000);
+    }
   });
 });
+
 
 // Reiniciar test
 reiniciarBtn.addEventListener("click", () => {
