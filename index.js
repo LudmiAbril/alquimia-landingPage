@@ -146,15 +146,15 @@ botonesClima.forEach(btn => {
 
     // Agregar estrellas mágicas
     for (let i = 0; i < 10; i++) {
-      console.log("🌟 estrella creada", estrella);
-
+      
       const estrella = document.createElement("span");
       estrella.classList.add("estrella");
       estrella.style.left = `${Math.random() * 80 + 10}%`;
       estrella.style.bottom = `${Math.random() * 40 + 10}px`;
       estrella.style.animationDelay = `${Math.random() * 2}s`;
       svgContainer.appendChild(estrella);
-
+      
+      
       // Eliminarla después de animarse
       setTimeout(() => estrella.remove(), 4000);
     }
