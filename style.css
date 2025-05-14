@@ -377,8 +377,8 @@ button {
   color: white;
 }
 .section-bordesTop {
-  border-top-left-radius: 300px;
-  border-top-right-radius: 300px;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
 }
 .overlapped {
   background-color: var(--lilac);
@@ -647,8 +647,8 @@ button {
   width: 50%;
   background-image: url("./img/insumos.png");
   background-size: cover;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   background-position: center;
 }
 .personalizado-section {
