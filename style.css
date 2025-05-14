@@ -123,6 +123,8 @@ header {
     align-items: center;
     gap: 6px;
     font-style: italic;
+    font-family: var(--text-font);
+    font-weight: 300;
   }
   
   .texto-info-ayuda i {
