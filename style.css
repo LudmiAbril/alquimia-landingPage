@@ -319,6 +319,9 @@ button {
 .footer {
   background-color: #e8e3de;
   color: white;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 500;
 
   & .footer-contain {
     background-color: #9444b6;
