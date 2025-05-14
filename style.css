@@ -253,7 +253,7 @@ button {
   }
 
   & .row {
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
 
     & .column {
@@ -263,15 +263,16 @@ button {
       max-width: 210px;
 
       & img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
       }
     }
+
+    
   }
 
   & p {
     font-family: "Roboto";
-    font-weight: bold;
     font-size: 24px;
     text-align: center;
   }
@@ -279,10 +280,34 @@ button {
   & .phrase {
     margin: 5rem 0;
     font-size: 24px;
+    font-weight: 700;
   }
 }
+.steps-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-/**/
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 70px;
+  color: #9444b6;
+  font-weight: bold;
+  align-self: flex-start;
+  transform: translateY(80px); 
+
+}
+
+
 /* /Proveedores/ */
 
 .providers-text {
@@ -651,6 +676,8 @@ button {
   border-bottom-left-radius: 20px;
   background-position: center;
 }
+
+
 .personalizado-section {
   background-color: var(--lilac);
   padding: 100px 42px;
@@ -658,14 +685,13 @@ button {
 
 .personalizado-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr;
   align-items: center;
-  gap: 6rem;
 }
 
 .personalizado-img img {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   display: block;
   margin: 0 auto;
 }
