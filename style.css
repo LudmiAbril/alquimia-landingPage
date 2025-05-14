@@ -115,9 +115,11 @@ header {
 }
 
 .text-medium {
-  font-family: var(--text-font);
-  font-size: 21px;
-  text-align: start;
+    font-family: var(--text-font);
+    font-weight: 500;
+    margin-top: 10%;
+    font-size: 20px;
+    text-align: start;
 }
 
 .texto-resultado {
