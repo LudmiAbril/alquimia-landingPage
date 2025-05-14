@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -54,27 +56,27 @@
       <div class="section">
       <h2 class="center title" data-aos="fade-up">¿CÓMO FUNCIONA?</h2>
     <article class="row steps-row">
-  <div class="column" data-aos="fade-up" data-aos-delay="100">
+  <div class="columnS" data-aos="fade-up" data-aos-delay="100">
     <img src="./img/step1.svg" alt="" />
     <p>Seleccioná las esencias</p>
   </div>
   <div class="arrow">→</div>
-  <div class="column" data-aos="fade-up" data-aos-delay="200">
+  <div class="columnS" data-aos="fade-up" data-aos-delay="200">
     <img src="./img/Step2.svg" alt="" />
     <p>Combiná las notas</p>
   </div>
   <div class="arrow">→</div>
-  <div class="column" data-aos="fade-up" data-aos-delay="300">
+  <div class="columnS" data-aos="fade-up" data-aos-delay="300">
     <img src="./img/step3.svg" alt="" />
     <p>Diseñá tu packaging</p>
   </div>
   <div class="arrow">→</div>
-  <div class="column" data-aos="fade-up" data-aos-delay="400">
+  <div class="columnS" data-aos="fade-up" data-aos-delay="400">
     <img src="./img/step4.svg" alt="" />
     <p>Contactate con tus proveedores</p>
   </div>
   <div class="arrow">→</div>
-  <div class="column" data-aos="fade-up" data-aos-delay="500">
+  <div class="columnS" data-aos="fade-up" data-aos-delay="500">
     <img src="./img/Step5.svg" alt="" />
     <p>Recibí tus ingredientes</p>
   </div>
@@ -85,43 +87,63 @@
     </section>
     <section class="test-olfativo section-lilac section-bordesTop " id="testOlfativo">
       <div class="contenedorTest ">
+
+      <section class="test-olfativo section-lilac section-bordesTop " id="testOlfativo">
+        <div class="contenedorTest ">
       <div class="grid-olfativo">
-        <!-- Izquierda -->
-        <div class="olfativo-info" data-aos="fade-right">
-          <h2 class="title">¿No sabés por dónde empezar?<br>Dejá que la magia te guíe.</h2>
-          <p class="text">Nuestro test de aromas te orienta a través de distintas preguntas que te permitirán encontrar los aromas que se adapten a tu esencia, creando tu fórmula perfecta.</p>
-          <button class="cto-btn">QUIERO HACER EL TEST</button>
-        
-        </div>
-    
-        <!-- Derecha -->
-        <div class="olfativo-interactivo" data-aos="fade-left">
-          <div class="pocima-container">
-            <div class="magic-bubbles"></div>
-          </div>
+          <!-- Izquierda -->
+          <div class="olfativo-info" data-aos="fade-right">
+            <h2 class="title">¿No sabés por dónde empezar?<br>Dejá que la magia te guíe.</h2>
+            <p class="text">Nuestro test de aromas te orienta a través de distintas preguntas que te permitirán encontrar los aromas que se adapten a tu esencia, creando tu fórmula perfecta.</p>
+            <button class="cto-btn">QUIERO HACER EL TEST</button>
           
-    
-          <div class="question-block" id="preguntaBlock"">
-            <h3 class="question">¿Qué clima preferís?</h3>
-            <p class="text-small">Responde para que descubramos qué familia olfativa va con vos</p>
-            <div class="opciones">
-              <button class="btn-fragancia acuatica" data-fragancia="acuatica"><span class="contenido-btn">Brisa marina</span></button>
-              <button class="btn-fragancia frutal" data-fragancia="frutal"><span class="contenido-btn">Calor Tropical</span></button>
-              <button class="btn-fragancia madera" data-fragancia="madera"><span class="contenido-btn">Otoño Templado</span></button>
-              <button class="btn-fragancia ambarada" data-fragancia="ambarada"><span class="contenido-btn">Invierno Nevado</span></button>
+          </div>
+      
+          <!-- Derecha -->
+          <div class="olfativo-interactivo" data-aos="fade-left">
+            <div class="pocima-container">
+              <div class="magic-bubbles"></div>
+            </div>
+            
+      
+            <div class="question-block" id="preguntaBlock"">
+              <h3 class="question">¿Qué clima preferís?</h3>
+              <p class="text-small">Respondé para que descubramos qué familia olfativa va con vos</p>
+              <div class="opciones">
+                <button class="btn-fragancia acuatica" data-fragancia="acuatica">
+                  <i class="bi bi-droplet-fill"></i> <span class="contenido-btn">Brisa marina</span>
+                </button>
+                
+                <button class="btn-fragancia frutal" data-fragancia="frutal">
+                  <i class="bi bi-emoji-sunglasses-fill"></i> <span class="contenido-btn">Calor Tropical</span>
+                </button>
+                
+                <button class="btn-fragancia madera" data-fragancia="madera">
+                  <i class="bi bi-tree-fill"></i> <span class="contenido-btn">Otoño Templado</span>
+                </button>
+                
+                <button class="btn-fragancia ambarada" data-fragancia="ambarada">
+                  <i class="bi bi-snow2"></i> <span class="contenido-btn">Invierno Nevado</span>
+                </button>
+                
+              </div>
+            </div>
+      
+            <div class="resultado-olfativo hidden" id="resultadoFamilia">
+              <p class="text-medium">Según tu respuesta, es probable que te gusten las esencias :</p>
+              <p class="texto-resultado"></p>
+              <button id="btnReiniciar" class="btn-probar">
+                <i class="bi bi-arrow-clockwise icono-probar"></i> Volver a probar
+              </button>
+              
+              
             </div>
           </div>
-    
-          <div class="resultado-olfativo hidden" id="resultadoFamilia">
-            <p class="text-medium">Según tu respuesta, es probable que te gusten las esencias :</p>
-            <p class="texto-resultado"></p>
-            <button id="btnReiniciar" class="btn-probar">Volver a probar</button>
-          </div>
         </div>
-      </div>
-    
+ 
+        
       <!-- Crear Perfume -->
-      <div class="grid-perfume">
+      <div class="grid-perfume mt-2">
         <div class="crear-perfume-img" data-aos="fade-right">
           <img src="./img/ilustracionPerfumBoy.png" alt="hombre haciendo perfume guiado por Alquimia">
         </div>
@@ -228,7 +250,7 @@
 
     <!-- Proveedores -->
     <section class="providers-contact section-bone" data-aos="fade-up">
-      <div class="section">
+      <div class="">
       <h2 class="title center">¿Sos fabricante o proveedor de insumos para perfumería?</h2>
       <article class="providers-text">
         <p class="center text">Te ofrecemos la posibilidad de publicitar tus productos en nuestra plataforma. Con un costo anual de $50.000 podés controlar tu stock y fijar tus precios.</p>
@@ -289,6 +311,9 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 
   <script src="./index.js"></script>
   <audio id="magicSound" src="./img/potion/bubble.mp3" preload="auto"></audio>
-
+  <div class="tooltip-familia" id="tooltipFamilia">
+    <img src="" alt="Imagen familia" class="tooltip-img">
+    <p class="tooltip-texto"></p>
+  </div>
 </body>
 </html>
