@@ -12,7 +12,59 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   if (titulo) observer.observe(titulo);
+  
+
+// =====================
+// TOOLTIP: MANEJO REFACTORIZADO
+// =====================
+const tooltip = document.getElementById("tooltipFamilia");
+let tipoSeleccionado = null;
+
+function mostrarTooltip(e, tipo) {
+  const familia = familias[tipo];
+  if (!familia) return;
+
+  tooltip.querySelector(".tooltip-texto").textContent = familia.descripcion;
+  tooltip.querySelector(".tooltip-img").src = familia.imagen;
+
+  tooltip.style.display = "block";
+  tooltip.style.opacity = "1";
+  tooltip.style.top = `${e.pageY + 15}px`;
+  tooltip.style.left = `${e.pageX + 15}px`;
+}
+
+function ocultarTooltip() {
+  if (!tooltip) return;
+  tooltip.style.display = "none";
+  tooltip.style.opacity = "0";
+}
+
+
+// Delegar eventos al contenedor #resultadoFamilia
+resultadoFamilia.addEventListener("mouseover", (e) => {
+  if (tipoSeleccionado && tooltip) {
+    mostrarTooltip(e, tipoSeleccionado);
+  }
 });
+
+resultadoFamilia.addEventListener("mousemove", (e) => {
+  tooltip.style.top = `${e.pageY + 15}px`;
+  tooltip.style.left = `${e.pageX + 15}px`;
+});
+
+resultadoFamilia.addEventListener("mouseleave", () => {
+  ocultarTooltip();
+});
+
+resultadoFamilia.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("texto-resultado") && tipoSeleccionado && tooltip) {
+    mostrarTooltip(e, tipoSeleccionado);
+  }
+});
+
+
+});
+
 
 
 // =====================
@@ -73,10 +125,30 @@ const svgContainer = document.querySelector(".pocima-container");
 const reiniciarBtn = document.getElementById("btnReiniciar");
 
 const familias = {
-  acuatica: { texto: "Marinas/Cítricas.", color: "#66cccc" },
-  frutal: { texto: "Frutales/Florales.", color: "#ff6699" },
-  madera: { texto: "Amaderadas/Especiadas.", color: "#cc9966" },
-  ambarada: { texto: "Gourmand/Ambaradas.", color: "#9966cc" }
+  acuatica: {
+    texto: "Marinas/Cítricas.",
+    color: "#66cccc",
+    descripcion: "Fragancias frescas inspiradas en el mar, ideales para días cálidos.",
+    imagen: "./img/familias/acuatica.jpg"
+  },
+  frutal: {
+    texto: "Frutales/Florales.",
+    color: "#ff6699",
+    descripcion: "Notas jugosas y dulces como frutas del trópico y flores exóticas.",
+    imagen: "./img/familias/frutal.jpg"
+  },
+  madera: {
+    texto: "Amaderadas/Especiadas.",
+    color: "#cc9966",
+    descripcion: "Aromas cálidos y terrosos, elegantes y envolventes.",
+    imagen: "./img/familias/madera.jpg"
+  },
+  ambarada: {
+    texto: "Gourmand/Ambaradas.",
+    color: "#9966cc",
+    descripcion: "Esencias dulces, profundas y sensuales como la vainilla y el ámbar.",
+    imagen: "./img/familias/ambarada.jpg"
+  }
 };
 
 const svgPaths = [
@@ -119,6 +191,7 @@ botonesClima.forEach(btn => {
   btn.addEventListener("click", async () => {
     const tipo = btn.dataset.fragancia;
     const familia = familias[tipo];
+    tipoSeleccionado = tipo;
     if (!familia) return;
 
     resultadoTexto.textContent = "";
@@ -156,7 +229,7 @@ botonesClima.forEach(btn => {
       
       
       // Eliminarla después de animarse
-      setTimeout(() => estrella.remove(), 4000);
+      setTimeout(() => estrella.remove(), 8000);
     }
   });
 });

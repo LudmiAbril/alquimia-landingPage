@@ -213,7 +213,7 @@ button {
   bottom: -8px;
   width: 0;
   height: 4px;
-  background: linear-gradient(to right, #fff, #ffc1fa);
+  background-color: var(--violet);
   border-radius: 2px;
   transition: width 1s ease-in-out;
 }
@@ -439,6 +439,32 @@ button {
   align-self: center;
 }
 
+/*TOOLTIP*/
+.tooltip-familia {
+    position: absolute;
+    display: none;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+    width: 220px;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tooltip-familia .tooltip-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .tooltip-familia .tooltip-texto {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
 .crear-perfume-info {
   display: flex;
   flex-direction: column;
@@ -448,11 +474,13 @@ button {
 
 .crear-perfume-img img {
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   display: block;
   margin: 0 auto;
 }
-
+.mt-2{
+    margin-top: 200px;
+}
 .opciones {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -521,7 +549,7 @@ button {
 }
 
 .madera:hover {
-  background-image: url("/img/fondos/otonio2.gif");
+  background-image: url("/img/fondos/otonio.gif");
   background-size: cover;
   background-position: center;
   color: white;
