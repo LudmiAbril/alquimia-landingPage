@@ -142,11 +142,12 @@ botonesClima.forEach(btn => {
     svg.classList.add("activated");
     svg.style.color = familia.color;
 
-    // Reproducir sonido
-    document.getElementById("magic-sound").play();
+ 
 
     // Agregar estrellas mágicas
     for (let i = 0; i < 10; i++) {
+      console.log("🌟 estrella creada", estrella);
+
       const estrella = document.createElement("span");
       estrella.classList.add("estrella");
       estrella.style.left = `${Math.random() * 80 + 10}%`;

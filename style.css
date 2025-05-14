@@ -399,10 +399,13 @@ button {
   padding: 3rem 5vw;
 }
 .pocima-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 300px; /* o igual al tamaño del frasco */
+  }
+  
 .pocima-container svg {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
   transition: filter 0.4s ease;
@@ -953,5 +956,8 @@ button {
       transform: translateY(-100px) scale(1.2);
       opacity: 0;
     }
+  }
+  .estrella {
+    background: radial-gradient(circle, white, #ffc0f7); /* mejor visibilidad */
   }
   
