@@ -39,39 +39,17 @@ function ocultarTooltip() {
   tooltip.style.display = "none";
   tooltip.style.opacity = "0";
 }
-//tipoSeleccionado = "acuatica";
-/* 
-// Delegar eventos al contenedor #resultadoFamilia
-resultadoFamilia.addEventListener("mouseover", (e) => {
-  if (tipoSeleccionado && tooltip) {
-    mostrarTooltip(e, tipoSeleccionado);
-  }
-});
 
-resultadoFamilia.addEventListener("mousemove", (e) => {
-  tooltip.style.top = `${e.pageY + 15}px`;
-  tooltip.style.left = `${e.pageX + 15}px`;
-});
 
-resultadoFamilia.addEventListener("mouseleave", () => {
-  ocultarTooltip();
-});
-
-resultadoFamilia.addEventListener("mouseover", (e) => {
-  if (e.target.classList.contains("texto-resultado") && tipoSeleccionado && tooltip) {
-    mostrarTooltip(e, tipoSeleccionado);
-  }
-}); */
-// Escuchar hover dentro de #resultadoFamilia
 resultadoFamilia.addEventListener("mouseover", (e) => {
   const hovered = e.target;
 
   if (
     hovered.classList.contains("texto-resultado") &&
-    hovered.dataset.tipo &&//tipoSeleccionado &&
+    hovered.dataset.tipo &&
     tooltip
   ) {
-    mostrarTooltip(e, hovered.dataset.tipo);//tipoSeleccionado);
+    mostrarTooltip(e, hovered.dataset.tipo);
   }
 });
 
@@ -153,7 +131,7 @@ const familias = {
     texto: "Marinas/Cítricas.",
     color: "#66cccc",
     descripcion: "Fragancias frescas inspiradas en el mar, ideales para días cálidos.",
-    imagen: "../img/familias/acuatica.jpeg"
+    imagen: "./img/familias/acuatica.jpeg"
   },
   frutal: {
     texto: "Frutales/Florales.",
