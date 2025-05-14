@@ -115,7 +115,21 @@ header {
   margin-top: 0;
   margin-bottom: 40px;
 }
-
+.texto-info-ayuda {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 8px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-style: italic;
+  }
+  
+  .texto-info-ayuda i {
+    font-size: 16px;
+    color: #9444b6;
+  }
+  
 .text-medium {
     font-family: var(--text-font);
     font-weight: 500;
